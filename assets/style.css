@@ -1,0 +1,98 @@
+
+* {
+  font-family: 'Kavoon', sans-serif;
+}
+.btn-outline-custom {
+  background-color: white;          /* White background */
+  color: #B87B96;                   /* Text color matching the outline */
+  border: 4px solid #B87B96;        /* Outline color */
+  border-radius: 20px
+}
+
+.btn-outline-custom:hover {
+  background-color: #B87B96;       /* Change background color on hover */
+  color: white;                     /* Change text color on hover */
+}
+
+.full-width-bar{
+  width: 100%;
+  background-color: #B87B96;
+}
+
+.wave-img {
+  width: 100%;
+  display: block
+}
+
+.center-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+}
+
+.muted-button {
+  background-color: #ccc;
+  color: #666;
+  border: 2px;
+  padding: 10px 20px;
+  cursor: not-allowed;
+  position: relative;
+  font-size: 16px;
+}
+.muted-button:hover::after {
+  content: "Coming soon";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  margin-top: 6px;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.portfolio-section-title {
+  color: white
+}
+
+.tall-button { 
+  height: 330px;
+  font-size: 4.5rem;
+  
+}
+
+/* Add semi-transparent overlay */
+/* .tall-button::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #B87B9699;
+  opacity: 0.6;
+  z-index: 1;
+} */
+
+.mb-8{
+  margin-bottom: 8rem;
+}
+
+.btn-image { 
+  background-position: center center; /* horizontal and vertical center */
+  background-size: cover;            /* fill the container */
+  background-repeat: no-repeat;      /* don't repeat the image */
+}
+.bg-digital  { background-image: url('/assets/digitalpainting1.png'); }
+.bg-malutka  { background-image: url('/assets/malutkapig1.png'); }
+.bg-weird  { background-image: url('/assets/weird1.png'); }
+.bg-random  { background-image: url('/assets/random1.png'); }
+.bg-moral  { background-image: url('/assets/moral1.png'); }
+
+.bg-marvin  { background-image: url('/assets/marvin1.png'); }
+.bg-unibo  { background-image: url('/assets/unibo1.png'); }
