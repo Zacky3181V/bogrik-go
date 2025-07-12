@@ -19,5 +19,9 @@ func main() {
         c.HTML(200, "portfolio.html", gin.H{})
     })
 
+	r.GET("/digital-painting", func(c *gin.Context){
+		c.HTML(200, "digital-painting.html", gin.H{})
+	})
+
 	r.Run(":8085")
 }

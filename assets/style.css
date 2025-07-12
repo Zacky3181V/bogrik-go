@@ -2,6 +2,11 @@
 * {
   font-family: 'Kavoon', sans-serif;
 }
+
+.text-main { 
+  color: #B87B96;
+}
+
 .btn-outline-custom {
   background-color: white;          /* White background */
   color: #B87B96;                   /* Text color matching the outline */
@@ -60,24 +65,18 @@
 }
 
 .portfolio-section-title {
-  color: white
+  color: white;
 }
 
-.tall-button { 
+.tall-btn {
   height: 330px;
   font-size: 4.5rem;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Add semi-transparent overlay */
-/* .tall-button::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #B87B9699;
-  opacity: 0.6;
-  z-index: 1;
-} */
+
 
 .mb-8{
   margin-bottom: 8rem;
