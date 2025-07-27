@@ -31,6 +31,9 @@ func main() {
 	r.GET("/random", func(c *gin.Context) {
 		c.HTML(200, "random.html", gin.H{})
 	})
+	r.GET("/moral", func(c *gin.Context) {
+		c.HTML(200, "moral.html", gin.H{})
+	})
 
 	r.Run(":8085")
 }
