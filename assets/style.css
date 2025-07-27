@@ -81,7 +81,9 @@
 .mb-8{
   margin-bottom: 8rem;
 }
-
+.mr-4-5{
+  margin-right: 40px;
+}
 .btn-image { 
   background-position: center center; /* horizontal and vertical center */
   background-size: cover;            /* fill the container */
