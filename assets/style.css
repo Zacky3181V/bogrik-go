@@ -7,6 +7,17 @@
   color: #B87B96;
 }
 
+.portfolio-section-title {
+  color: white;
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 5rem); /* auto-scaling font */
+  line-height: 1.2;
+}
+.portfolio-subtitle {
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 600;
+}
+
 .btn-outline-custom {
   background-color: white;          /* White background */
   color: #B87B96;                   /* Text color matching the outline */
@@ -64,9 +75,6 @@
   z-index: 1;
 }
 
-.portfolio-section-title {
-  color: white;
-}
 
 .tall-btn {
   height: 330px;
@@ -76,13 +84,22 @@
   align-items: center;
 }
 
-
+.responsive-btn-text {
+    font-size: clamp(1rem, 3.5vw, 4.5rem); /* Adjust as needed */
+    font-weight: 600;
+    text-align: center;
+    white-space: normal; /* allow wrapping on small screens */
+}
 
 .mb-8{
   margin-bottom: 8rem;
 }
 .mr-4-5{
   margin-right: 40px;
+}
+
+.w-45{
+  width:45%
 }
 .btn-image { 
   background-position: center center; /* horizontal and vertical center */
