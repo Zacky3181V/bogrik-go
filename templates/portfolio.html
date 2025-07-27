@@ -30,33 +30,42 @@
 
 
 
-    <nav class="d-flex justify-content-center mt-4">
-      <a class="btn btn-outline-custom btn-lg mx-2" href="/"><strong >About</strong></a>
-      <a class="btn btn-outline-custom btn-lg mx-2" href="/portfolio"><strong>Portfolio</strong></a>
-      <button class="btn btn-outline-custom btn-lg mx-2 muted-button" disabled><strong>Store</strong></button>
+    <nav class="d-flex flex-column flex-md-row align-items-center justify-content-center mt-4">
+        <a class="btn btn-outline-custom btn-lg mb-3 mb-md-0 mx-md-2" href="/"><strong>About</strong></a>
+        <a class="btn btn-outline-custom btn-lg mb-3 mb-md-0 mx-md-2" href="/portfolio"><strong>Portfolio</strong></a>
+        <button class="btn btn-outline-custom btn-lg muted-button" disabled><strong>Store</strong></button>
     </nav>
 
 
-    <div class="full-width-bar d-flex flex-column align-items-center">
-        <img src="/assets/bottom-wave1.png" alt="Bottom Wave" class="wave-img" />
-        <div class="container my-4 full-width-bar">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center">
-                    <img src="/assets/logo-smaller.png" alt="Bogrik logo" class="img-fluid" />
-                </div>
-                <div class="col-md-6 d-flex flex-column">
-                    <div class="d-flex align-items-center mb-5">
-                        <img src="/assets/instagram.svg" alt="instagram link" class="responsive-icon svg-bg mx-2" >
-                        <span class="ml-3 responsive-btn-text text-white">bogrik.art</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <img src="/assets/tiktok.svg" alt="tiktok link" class="responsive-icon svg-bg mx-2" >
-                        <span class="ml-3 responsive-btn-text text-white">bogrik.art</span>
-                    </div>
-                </div>
-            </div>
+
+  <div class="full-width-bar d-flex flex-column align-items-center">
+  <img src="/assets/bottom-wave1.png" alt="Bottom Wave" class="wave-img" />
+
+  <div class="container my-4 full-width-bar">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+      
+      <!-- Social icons: appear first on small screens, second on md+ -->
+      <div class="d-flex flex-column align-items-center align-items-md-start order-1 order-md-2 mb-4 mb-md-0">
+        <div class="d-flex align-items-center mb-4">
+          <img src="/assets/instagram.svg" alt="instagram link" class="responsive-icon svg-bg mx-2">
+          <span class="ml-3 responsive-btn-text text-white">bogrik.art</span>
         </div>
+        <div class="d-flex align-items-center">
+          <img src="/assets/tiktok.svg" alt="tiktok link" class="responsive-icon svg-bg mx-2">
+          <span class="ml-3 responsive-btn-text text-white">bogrik.art</span>
+        </div>
+      </div>
+
+      <!-- Logo: appears below icons on small, left of them on md+ -->
+      <div class="text-center order-2 order-md-1">
+        <img src="/assets/logo-smaller.png" alt="Bogrik logo" class="img-fluid" />
+      </div>
+
     </div>
+  </div>
+</div>
+
+
 
 </body>
 </html>

@@ -92,6 +92,13 @@
     white-space: normal; /* allow wrapping on small screens */
 }
 
+@media (max-width: 768px) {
+    .btn-lg {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+
 /* Default: large screens */
 .mb-8 {
   margin-bottom: 8rem;
