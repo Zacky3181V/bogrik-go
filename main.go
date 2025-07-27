@@ -37,6 +37,9 @@ func main() {
 	r.GET("/marvin", func(c *gin.Context) {
 		c.HTML(200, "marvin.html", gin.H{})
 	})
+	r.GET("/unibo", func(c *gin.Context) {
+		c.HTML(200, "unibo.html", gin.H{})
+	})
 
 	r.Run(":8085")
 }
