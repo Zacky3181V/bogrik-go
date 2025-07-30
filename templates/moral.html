@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>{{.Title}}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-    <div class="full-width-bar d-flex flex-column align-items-center">
-        <h1 class="text-center mt-5 portfolio-section-title">Moral</h1>
-        <img src="/assets/top-wave.png" alt="Top Wave" class="wave-img" />
-    </div>
-    <h2 class="text-center portfolio-subtitle text-main">Bogrik</h2>
+    {{ template "header" . }}
+    {{ template "navbar" . }}
 
     <div class="d-flex flex-column align-items-center mt-5 px-3" style="width: 100%;">
         <img src="/assets/moral/moral1.png" class="mb-5" />
@@ -31,10 +28,8 @@
     </div>
 
 
-    <nav class="d-flex justify-content-center mt-4">
-      <a class="btn btn-outline-custom btn-lg mx-2" href="/"><strong >About</strong></a>
-      <a class="btn btn-outline-custom btn-lg mx-2" href="/portfolio"><strong>Portfolio</strong></a>
-      <button class="btn btn-outline-custom btn-lg mx-2 muted-button" disabled><strong>Store</strong></button>
-    </nav>
+    {{ template "navbar" . }}
+
+  {{ template "footer" . }}
 </body>
 </html>

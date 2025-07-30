@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>{{ .Title }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-    <div class="full-width-bar d-flex flex-column align-items-center">
-        <h1 class="text-center mt-5 portfolio-section-title">Bogrik</h1>
-        <img src="/assets/top-wave.png" alt="Top Wave" class="wave-img" />
-    </div>
-    <h2 class="text-center portfolio-subtitle text-main">Portfolio</h2>
-
+    {{ template "header" . }}
+    {{ template "navbar" . }}
     <div class="d-flex flex-column align-items-center mt-5" style="width: 100%;">
         <a class="btn btn-secondary mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-digital" href="/digital-painting">Digital Painting</a>
         <a class="btn btn-secondary mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-malutka" href="/malutka-pig">Malutka Pig</a>
@@ -25,47 +21,11 @@
         <a class="btn btn-secondary mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-unibo" href="/unibo">UniBo</a>
     </div>
 
+    {{ template "navbar" . }}
 
-
-
-
-
-    <nav class="d-flex flex-column flex-md-row align-items-center justify-content-center mt-4">
-        <a class="btn btn-outline-custom btn-lg mb-3 mb-md-0 mx-md-2" href="/"><strong>About</strong></a>
-        <a class="btn btn-outline-custom btn-lg mb-3 mb-md-0 mx-md-2" href="/portfolio"><strong>Portfolio</strong></a>
-        <button class="btn btn-outline-custom btn-lg muted-button" disabled><strong>Store</strong></button>
-    </nav>
-
-
-
-  <div class="full-width-bar d-flex flex-column align-items-center">
-  <img src="/assets/bottom-wave1.png" alt="Bottom Wave" class="wave-img" />
-
-  <div class="container my-4 full-width-bar">
-    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
-      
-      <!-- Social icons: appear first on small screens, second on md+ -->
-      <div class="d-flex flex-column align-items-center align-items-md-start order-1 order-md-2 mb-4 mb-md-0">
-        <div class="d-flex align-items-center mb-4">
-          <img src="/assets/instagram.svg" alt="instagram link" class="responsive-icon svg-bg mx-2">
-          <span class="ml-3 responsive-btn-text text-white">bogrik.art</span>
-        </div>
-        <div class="d-flex align-items-center">
-          <img src="/assets/tiktok.svg" alt="tiktok link" class="responsive-icon svg-bg mx-2">
-          <span class="ml-3 responsive-btn-text text-white">bogrik.art</span>
-        </div>
-      </div>
-
-      <!-- Logo: appears below icons on small, left of them on md+ -->
-      <div class="text-center order-2 order-md-1">
-        <img src="/assets/logo-smaller.png" alt="Bogrik logo" class="img-fluid" />
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-
+  {{ template "footer" . }}
 </body>
 </html>
+
+    
+
