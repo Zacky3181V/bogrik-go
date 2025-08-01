@@ -40,15 +40,43 @@
   display: block
 }
 
-.center-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  width: 200px; /* Adjust size as needed */
+.mb-ngtv-2{
+  margin-bottom: 1vh;
+}
+.about-text{
+  font-size: clamp(2rem, 6vw, 5rem); /* auto-scaling font */
+  color: #B87B96;
+}
+.logo-width{
+  width: 500px; /* Adjust size as needed */
   height: auto;
 }
+@media (max-width: 768px) {
+  .logo-width {
+    max-width: 400px;
+  }
+  .mb-ngtv-2{
+    margin-bottom: 1vh;
+}
+  
+}
+@media (max-width: 576px) {
+  .logo-width {
+    max-width: 300px;
+  }
+  .mb-ngtv-2{
+    margin-bottom: 1vh;
+}
+}
+@media (max-width: 399px) {
+  .logo-width {
+    max-width: 150px;
+  }
+}
+
+
+
+
 
 .muted-button {
   background-color: #ccc;
