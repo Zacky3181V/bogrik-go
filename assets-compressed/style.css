@@ -1,0 +1,218 @@
+
+* {
+  font-family: 'Kavoon', sans-serif;
+}
+
+.text-main { 
+  color: #B87B96;
+}
+
+.portfolio-section-title {
+  color: white;
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 5rem); /* auto-scaling font */
+  line-height: 1.2;
+}
+.portfolio-subtitle {
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 600;
+}
+
+.btn-outline-custom {
+  background-color: white;          /* White background */
+  color: #B87B96;                   /* Text color matching the outline */
+  border: 4px solid #B87B96;        /* Outline color */
+  border-radius: 20px
+}
+
+.btn-outline-custom:hover {
+  background-color: #B87B96;       /* Change background color on hover */
+  color: white;                     /* Change text color on hover */
+}
+
+.full-width-bar{
+  width: 100%;
+  background-color: #B87B96;
+}
+
+.wave-img {
+  width: 100%;
+  display: block
+}
+
+.mb-ngtv-2{
+  margin-bottom: 1vh;
+}
+.about-text{
+  font-size: clamp(2rem, 6vw, 5rem); /* auto-scaling font */
+  color: #B87B96;
+}
+.logo-width{
+  width: 500px; /* Adjust size as needed */
+  height: auto;
+}
+@media (max-width: 768px) {
+  .logo-width {
+    max-width: 400px;
+  }
+  .mb-ngtv-2{
+    margin-bottom: 1vh;
+}
+  
+}
+@media (max-width: 576px) {
+  .logo-width {
+    max-width: 300px;
+  }
+  .mb-ngtv-2{
+    margin-bottom: 1vh;
+}
+}
+@media (max-width: 399px) {
+  .logo-width {
+    max-width: 150px;
+  }
+}
+
+
+
+
+
+.muted-button {
+  background-color: #ccc;
+  color: #666;
+  border: 2px;
+  padding: 10px 20px;
+  cursor: not-allowed;
+  position: relative;
+  font-size: 16px;
+}
+.muted-button:hover::after {
+  content: "Coming soon";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  margin-top: 6px;
+  font-size: 14px;
+  z-index: 1;
+}
+
+
+.tall-btn {
+  
+  aspect-ratio: 4 / 1;
+  font-size: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.responsive-btn-text {
+    font-size: clamp(1rem, 3.5vw, 4.5rem); /* Adjust as needed */
+    font-weight: 600;
+    text-align: center;
+    white-space: normal; /* allow wrapping on small screens */
+}
+
+@media (max-width: 768px) {
+    .btn-lg {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+/* Default: large screens */
+.mb-8 {
+  margin-bottom: 8rem;
+}
+
+/* Screens ≤ 1200px */
+@media (max-width: 1200px) {
+  .mb-8 {
+    margin-bottom: 6rem;
+  }
+}
+
+/* Screens ≤ 992px */
+@media (max-width: 992px) {
+  .mb-8 {
+    margin-bottom: 5rem;
+  }
+}
+
+/* Screens ≤ 768px */
+@media (max-width: 768px) {
+  .mb-8 {
+    margin-bottom: 4rem;
+  }
+}
+
+/* Screens ≤ 576px */
+@media (max-width: 576px) {
+  .mb-8 {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Screens ≤ 400px */
+@media (max-width: 400px) {
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+}
+
+
+.mr-4-5{
+  margin-right: 40px;
+}
+
+.w-45{
+  width:45%
+}
+
+.svg-bg{
+  background-color: #B87B96
+}
+
+.responsive-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  /* Smaller screens */
+  @media (max-width: 768px) {
+    .responsive-icon {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  /* Very small screens */
+  @media (max-width: 400px) {
+    .responsive-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+
+.btn-image { 
+  background-position: center center; /* horizontal and vertical center */
+  background-size: cover;            /* fill the container */
+  background-repeat: no-repeat;      /* don't repeat the image */
+}
+.bg-digital  { background-image: url('/assets-compressed/digitalpainting1.png'); }
+.bg-malutka  { background-image: url('/assets-compressed/malutkapig1.png'); }
+.bg-weird  { background-image: url('/assets-compressed/weird1.png'); }
+.bg-random  { background-image: url('/assets-compressed/random1.png'); }
+.bg-moral  { background-image: url('/assets-compressed/moral1.png'); }
+
+.bg-marvin  { background-image: url('/assets-compressed/marvin1.png'); }
+.bg-unibo  { background-image: url('/assets-compressed/unibo1.png'); }
