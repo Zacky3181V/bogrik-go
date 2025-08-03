@@ -1,8 +1,8 @@
 # Introduction
-This is a monorepo containing gin webserver and future e-commerce web site.
+This is a repository containing gin webserver.
 
 ## What is the purpose
-This project is made for my wife and it serves as a portfolio to reveal her art works as well as e-commerce platform for selling her digital art, print works.
+This project is made for my wife and it serves as a portfolio to reveal her art works.
 
 You can view the web site by following [bogrik.com](https://bogrik.com/) link. I hope by the time you read it, it is up and working. 
 
