@@ -1,10 +1,17 @@
 
 * {
-  font-family: 'Kavoon', sans-serif;
+  font-family: 'Luckiest Guy', cursive;
 }
 
+:root{
+  --primary-color: #FF8DB7;
+  --secondary-color: #FFC0D7;
+  --yellow-color: #FFC300;
+  --red-color: #FF7474;
+  --grey-color: #A29298;
+}
 .text-main { 
-  color: #B87B96;
+  color: var(--primary-color);
 }
 
 .portfolio-section-title {
@@ -20,19 +27,19 @@
 
 .btn-outline-custom {
   background-color: white;          /* White background */
-  color: #B87B96;                   /* Text color matching the outline */
-  border: 4px solid #B87B96;        /* Outline color */
+  color: var(--primary-color);                  /* Text color matching the outline */
+  border: 4px solid var(--primary-color);       /* Outline color */
   border-radius: 20px
 }
 
 .btn-outline-custom:hover {
-  background-color: #B87B96;       /* Change background color on hover */
+  background-color: var(--primary-color);       /* Change background color on hover */
   color: white;                     /* Change text color on hover */
 }
 
 .full-width-bar{
   width: 100%;
-  background-color: #B87B96;
+  background-color: var(--primary-color)
 }
 
 .wave-img {
@@ -45,7 +52,7 @@
 }
 .about-text{
   font-size: clamp(2rem, 6vw, 5rem); /* auto-scaling font */
-  color: #B87B96;
+  color: var(--primary-color)
 }
 .logo-width{
   width: 500px; /* Adjust size as needed */
@@ -177,7 +184,7 @@
 }
 
 .svg-bg{
-  background-color: #B87B96
+  background-color: var(--primary-color);
 }
 
 .responsive-icon {
