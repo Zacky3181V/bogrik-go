@@ -1,7 +1,9 @@
 {{ define "navbar" }}
-<nav class="d-flex flex-column flex-md-row align-items-center justify-content-center mt-4">
-    <a class="btn btn-outline-custom btn-lg mb-3 mb-md-0 mx-md-2" href="/"><strong>About</strong></a>
-    <a class="btn btn-outline-custom btn-lg mb-3 mb-md-0 mx-md-2" href="/portfolio"><strong>Portfolio</strong></a>
-    <button class="btn btn-outline-custom btn-lg muted-button" disabled><strong>Store</strong></button>
-</nav>
+<div class="d-flex justify-content-center my-4">
+  <div class="bg-light-grey rounded-pill px-4 py-2 d-flex gap-1">
+    <a class="btn btn-outline-pink btn-pink rounded-pill px-4" href="/about">About</a>
+    <a class="btn btn-outline-yellow btn-yellow rounded-pill px-4" href="/portfolio">Portfolio</a>
+    <a class="btn btn-outline-red btn-red rounded-pill px-4 muted-button" href="#">Store</a>
+  </div>
+</div>
 {{ end }}
