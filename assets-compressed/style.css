@@ -39,6 +39,37 @@ body {
 .text-main { 
   color: var(--primary-color);
 }
+.text-secondary{
+  color: var(--secondary-color);
+}
+.text-y{
+  color: var(--yellow-color);
+}
+.text-r{
+  color: var(--red-color)
+}
+.text-g{
+  color: var(--grey-color);
+}
+.text-light-grey{
+  color: var(--light-grey-color);
+}
+.text-pr{
+  color: var(--pink-red-color);
+}
+
+
+.font-size-48{
+  font-size: 48px;
+}
+
+.font-size-96{
+  font-size: 96px;
+}
+
+.w-70{
+  width: 70%;
+}
 
 .portfolio-section-title {
   color: white;
