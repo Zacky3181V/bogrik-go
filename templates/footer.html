@@ -1,26 +1,58 @@
 {{ define "footer" }}
-<div class="full-width-bar d-flex flex-column align-items-center">
-    <img src="/assets-compressed/bottom-wave1.png" alt="Bottom Wave" class="wave-img" />
-  
-    <div class="container my-4 full-width-bar">
-      <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+<div class="full-width-bar bg-pink d-flex flex-column align-items-center">
+  <div class="container my-4 full-width-bar">
+    <div class="bg-light-grey rounded-55 py-5 px-5">
+      
+      <div class="row align-items-stretch justify-content-center">
+        
+        <!-- Social Links -->
+        <div class="col-12 col-md-6 order-1 order-md-2 mb-4 mb-md-0 d-flex flex-column">
+          <div class="d-flex flex-column flex-grow-1 justify-content-between align-items-center w-100">
 
-        <div class="d-flex flex-column align-items-center align-items-md-start order-1 order-md-2 mb-4 mb-md-0">
-          <div class="d-flex align-items-center mb-4">
-            <img src="/assets-compressed/instagram.svg" alt="instagram link" class="responsive-icon svg-bg mx-2">
-            <span class="ml-3 responsive-btn-text text-white">bogrik.art</span>
-          </div>
-          <div class="d-flex align-items-center">
-            <img src="/assets-compressed/tiktok.svg" alt="tiktok link" class="responsive-icon svg-bg mx-2">
-            <span class="ml-3 responsive-btn-text text-white">bogrik.</span>
+            <!-- Instagram -->
+            <div class="d-flex bg-pr flex-grow-1 w-100 mb-4 rounded-55">
+              <!-- Image: 1/3 -->
+              <div class="d-flex justify-content-center align-items-center" style="flex-basis: 33%;">
+                <img src="/assets-compressed/instagram.svg" alt="instagram link" class="responsive-icon mx-2">
+              </div>
+              <!-- Text: 2/3 -->
+              <div class="d-flex align-items-center" style="flex-basis: 67%;">
+                <span class="responsive-btn-text text-white">bogrik.art</span>
+              </div>
+            </div>
+
+            <!-- TikTok 1 -->
+            <div class="d-flex bg-y flex-grow-1 w-100 mb-4 rounded-55">
+              <div class="d-flex justify-content-center align-items-center" style="flex-basis: 33%;">
+                <img src="/assets-compressed/tiktok.svg" alt="tiktok link" class="responsive-icon mx-2">
+              </div>
+              <div class="d-flex align-items-center" style="flex-basis: 67%;">
+                <span class="responsive-btn-text text-white">bogrik.</span>
+              </div>
+            </div>
+
+            <!-- TikTok 2 -->
+            <div class="d-flex bg-g flex-grow-1 w-100 rounded-55">
+              <div class="d-flex justify-content-center align-items-center" style="flex-basis: 33%;">
+                <img src="/assets-compressed/tiktok.svg" alt="tiktok link" class="responsive-icon mx-2">
+              </div>
+              <div class="d-flex align-items-center" style="flex-basis: 67%;">
+                <span class="responsive-btn-text text-white">bogrik.</span>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <div class="text-center order-2 order-md-1">
+        <!-- Logo -->
+        <div class="col-12 col-md-6 text-center order-2 order-md-1 d-flex align-items-center justify-content-center bg-pink rounded-55">
           <img src="/assets-compressed/logo-even-smaller.png" alt="Bogrik logo" class="img-fluid" />
         </div>
 
       </div>
     </div>
   </div>
+</div>
+
+
 {{ end }}

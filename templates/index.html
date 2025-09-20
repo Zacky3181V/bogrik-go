@@ -13,32 +13,29 @@
 <body>
         {{ template "navbar" . }}
       <div class="full-width-bar d-flex flex-column align-items-center">
-        <img src="/assets-compressed/bottom-wave2.png" alt="Bottom Wave" class="wave-img mb-ngtv-2" />
-        <img src="/assets-compressed/logo-smaller.png" alt="Logo" class="img-fluid logo-width"/>
-        <img src="/assets-compressed/top-wave.png" alt="Top Wave" class="wave-img" />
+        <img src="/assets-compressed/logo-smaller.png" alt="Logo" class="img-fluid logo-width logo-bg-primary"/>
       </div>
 
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <div class="d-flex flex-column align-items-center w-50">
 
-          <h1 class="text-main mb-5">Hi,  I'm Bogrik, I'm glad to see you here (~^ ^) ~ </h1>
-          <h2 class="text-main h1">About</h2>
+      <div class="d-flex justify-content-center my-4">
+        <div class="bg-light-grey rounded-pill px-4 py-2 d-flex gap-1">
+          <span class="text-main my-5 h1">Hi,  I'm Bogrik, I'm glad to see you here (~^ ^) ~ </span>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center my-4">
+        <div class="bg-light-grey rounded-pill px-4 py-4 d-flex flex-column align-items-center gap-3">
           <span class="text-main h2">
             I am an artist from Ukraine. I work in different techniques, but I mostly create digital art. 
             I am not limited by a single style, and I enjoy experimenting with various techniques and materials to express ideas. 
-            <br>
-            <br>
             Art feels like magic to me. It helps me bring any idea to life and create whole new worlds.
-            <br>
-            <br>
             I have been making art for over 10 years. I graduated from the art lyceum in Kyiv, and now I am studying illustration in Rotterdam.
-            <br>
-            <br>
             I am open for illustration commissions and other creative projects
           </span>
         </div>
-
       </div>
+
+      
 
       {{template "navbar" .}}
 
