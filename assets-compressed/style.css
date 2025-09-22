@@ -32,6 +32,11 @@
 * {
   font-family: 'Luckiest Guy', cursive;
 }
+
+.trim-font-gap{
+  margin-bottom: -1rem;
+}
+
 body {
   background-color: var(--secondary-color)
 }
@@ -63,6 +68,10 @@ body {
   font-size: 48px;
 }
 
+.font-size-40{
+  font-size: 40px;
+}
+
 .font-size-96{
   font-size: 96px;
 }
@@ -72,13 +81,13 @@ body {
 }
 
 .portfolio-section-title {
-  color: white;
+  color: var(--primary-color);
   font-weight: 400;
   font-size: clamp(2rem, 6vw, 5rem); /* auto-scaling font */
   line-height: 1.2;
 }
 .portfolio-subtitle {
-    font-size: clamp(2rem, 6vw, 5rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 600;
 }
 
@@ -215,7 +224,7 @@ body {
 }
 
 .responsive-btn-text {
-    font-size: clamp(1rem, 3.5vw, 4.5rem); /* Adjust as needed */
+    font-size: clamp(1rem, 2.50vw, 4.5rem); /* Adjust as needed */
     font-weight: 600;
     text-align: center;
     white-space: normal; /* allow wrapping on small screens */
@@ -230,6 +239,9 @@ body {
 
 .mb-8 {
   margin-bottom: 8rem;
+}
+.mt-8 {
+  margin-top: 8rem;
 }
 
 @media (max-width: 1200px) {

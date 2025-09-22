@@ -12,14 +12,20 @@
 <body>
     {{ template "header" . }}
     {{ template "navbar" . }}
-    <div class="d-flex flex-column align-items-center mt-5" style="width: 100%;">
-        <a class="btn btn-secondary mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-digital" href="/digital-painting">Digital Painting</a>
-        <a class="btn btn-secondary mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-malutka" href="/malutka-pig">Malutka Pig</a>
-        <a class="btn btn-secondary mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-weird" href="/weird">Weird</a>
-        <a class="btn btn-secondary mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-random" href="/random">Random</a>
-        <a class="btn btn-secondary mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-moral" href="/moral">Moral</a>
-        <a class="btn btn-secondary mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-marvin" href="/marvin">Marvin's Adventure</a>
-        <a class="btn btn-secondary mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-unibo" href="/unibo">UniBo</a>
+    <div class="d-flex justify-content-center my-4">
+        <div class="bg-light-grey text-center rounded-55 px-5 py-2 d-flex gap-1">
+          
+          <h2 class="text-center portfolio-subtitle text-main rounded-55 text-g trim-font-gap">{{ .SubTitle }}</h2>
+        </div>
+      </div>
+    <div class="d-flex flex-column align-items-center mt-5 bg-light-grey rounded-55 mx-auto" style="width: 80%;">
+        <a class="btn btn-secondary rounded-55 mt-8 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-digital" href="/digital-painting">Digital Painting</a>
+        <a class="btn btn-secondary rounded-55 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-malutka" href="/malutka-pig">Malutka Pig</a>
+        <a class="btn btn-secondary rounded-55 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-weird" href="/weird">Weird</a>
+        <a class="btn btn-secondary rounded-55 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-random" href="/random">Random</a>
+        <a class="btn btn-secondary rounded-55 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-moral" href="/moral">Moral</a>
+        <a class="btn btn-secondary rounded-55 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-marvin" href="/marvin">Marvin's Adventure</a>
+        <a class="btn btn-secondary rounded-55 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-unibo" href="/unibo">UniBo</a>
     </div>
 
     {{ template "navbar" . }}
