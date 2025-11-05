@@ -91,6 +91,10 @@ body {
     font-weight: 600;
 }
 
+index-text {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
 .btn-outline-pink {
   background-color: var(--primary-color);
   color: var(--white-color);
