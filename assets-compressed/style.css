@@ -44,7 +44,13 @@ body {
 .text-main { 
   color: var(--primary-color);
 }
-.text-secondary{
+.text-second{
+  color: var(--secondary-color);
+}
+.text-second::placeholder{
+  color: var(--secondary-color);
+}
+.text-second:focus{
   color: var(--secondary-color);
 }
 .text-y{
@@ -63,6 +69,15 @@ body {
   color: var(--pink-red-color);
 }
 
+.input-text{
+  color: var(--grey-color);
+}
+.input-text::placeholder {
+  color: var(--grey-color);
+}
+.input-text:focus{
+  color: var(--grey-color);
+}
 
 .font-size-48{
   font-size: 48px;
