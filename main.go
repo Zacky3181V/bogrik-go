@@ -15,7 +15,9 @@ func main() {
 	})
 
 	r.GET("/about", func(c *gin.Context) {
-		c.HTML(200, "index.html", gin.H{})
+		c.HTML(200, "index.html", gin.H{
+			"Title": "About",
+		})
 	})
 
 	r.GET("/portfolio", func(c *gin.Context) {
