@@ -43,45 +43,49 @@ func HandleForm(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
+	env:= os.Getenv("ENV")
 
-	//msg := formatOrderMessage(order)
-	chatID := getChatID()
+	if env=="prod"{
 
-	sendOrderToTelegram(order, chatID)
-	client := resend.NewClient(os.Getenv("RESEND_KEY"))
-
-	if order.MarketingConsent {
-		go func(email string) {
-
-			params := &resend.CreateContactRequest{
-				Email: email,
-			}
-			_, err := client.Contacts.Create(params)
-			if err != nil {
-				log.Printf("Failed to create contact, %v", err)
-			}
-		}(order.Email)
+		//msg := formatOrderMessage(order)
+		chatID := getChatID()
+	
+		sendOrderToTelegram(order, chatID)
+		client := resend.NewClient(os.Getenv("RESEND_KEY"))
+	
+		if order.MarketingConsent {
+			go func(email string) {
+	
+				params := &resend.CreateContactRequest{
+					Email: email,
+				}
+				_, err := client.Contacts.Create(params)
+				if err != nil {
+					log.Printf("Failed to create contact, %v", err)
+				}
+			}(order.Email)
+		}
+		ctx := context.TODO()
+	
+		emailBody, err := os.ReadFile("templates/order-confirmation-email.html")
+		if err != nil {
+			log.Printf("Failed to read order-confirmation-email.html")
+		}
+	
+		params := &resend.SendEmailRequest{
+			From:    os.Getenv("EMAIL_FROM"),
+			To:      []string{order.Email},
+			Subject: os.Getenv("EMAIL_SUBJECT"),
+			Html:    string(emailBody),
+		}
+	
+		sent, err := client.Emails.SendWithContext(ctx, params)
+	
+		if err != nil {
+			panic(err)
+		}
+		fmt.Println(sent.Id)
 	}
-	ctx := context.TODO()
-
-	emailBody, err := os.ReadFile("templates/order-confirmation-email.html")
-	if err != nil {
-		log.Printf("Failed to read order-confirmation-email.html")
-	}
-
-	params := &resend.SendEmailRequest{
-		From:    os.Getenv("EMAIL_FROM"),
-		To:      []string{order.Email},
-		Subject: os.Getenv("EMAIL_SUBJECT"),
-		Html:    string(emailBody),
-	}
-
-	sent, err := client.Emails.SendWithContext(ctx, params)
-
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(sent.Id)
 
 	c.JSON(http.StatusOK, gin.H{"status": "ok"})
 
