@@ -123,68 +123,80 @@ func sendOrderToTelegram(order Order, chatID int64) {
 }
 
 func sendTelegramMediaGroup(chatID int64, files []*multipart.FileHeader, caption string) error {
-    token := os.Getenv("TELEGRAM_BOT_TOKEN")
+    token := os.Getenv("TELEGRAM_BOT_KEY")
     url := fmt.Sprintf("https://api.telegram.org/bot%s/sendMediaGroup", token)
 
-    // multipart body
     body := &bytes.Buffer{}
     writer := multipart.NewWriter(body)
-
+    
+    // Build media array
     media := []Media{}
-
-    for i, f := range files {
-        filename := fmt.Sprintf("file%d", i+1)
-        part, err := writer.CreateFormFile(filename, f.Filename)
-        if err != nil {
-            return err
-        }
-
-        file, err := f.Open()
-        if err != nil {
-            return err
-        }
-
-        _, err = io.Copy(part, file)
-        file.Close()
-        if err != nil {
-            return err
-        }
-
+    for i := range files {
+        filename := fmt.Sprintf("file%d", i)
         m := Media{
             Type:  "photo",
             Media: "attach://" + filename,
         }
         if i == 0 {
             m.Caption = caption
-            m.ParseMode = "MarkdownV2"
         }
-
         media = append(media, m)
     }
-
-    mediaJSON, _ := json.Marshal(media)
-    writer.WriteField("chat_id", fmt.Sprintf("%d", chatID))
-    writer.WriteField("media", string(mediaJSON))
-
+    
+    // Write metadata fields FIRST
+    mediaJSON, err := json.Marshal(media)
+    if err != nil {
+        return err
+    }
+    
+    if err := writer.WriteField("chat_id", fmt.Sprintf("%d", chatID)); err != nil {
+        return err
+    }
+    if err := writer.WriteField("media", string(mediaJSON)); err != nil {
+        return err
+    }
+    
+    // Then attach files
+    for i, f := range files {
+        filename := fmt.Sprintf("file%d", i)
+        part, err := writer.CreateFormFile(filename, f.Filename)
+        if err != nil {
+            return err
+        }
+        
+        file, err := f.Open()
+        if err != nil {
+            return err
+        }
+        
+        _, err = io.Copy(part, file)
+        file.Close()
+        if err != nil {
+            return err
+        }
+    }
+    
     writer.Close()
-
+    
     req, err := http.NewRequest("POST", url, body)
     if err != nil {
         return err
     }
     req.Header.Set("Content-Type", writer.FormDataContentType())
-
+    
     client := &http.Client{}
     resp, err := client.Do(req)
     if err != nil {
         return err
     }
     defer resp.Body.Close()
-
+    
+    // Better error reporting
     if resp.StatusCode >= 300 {
-        return fmt.Errorf("telegram returned status: %s", resp.Status)
+        bodyBytes, _ := io.ReadAll(resp.Body)
+        return fmt.Errorf("telegram returned status %s: %s", resp.Status, string(bodyBytes))
     }
-
+    
     return nil
 }
 
