@@ -1,6 +1,9 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/Zacky3181V/bogrik-go/backend"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
 	r := gin.Default()
@@ -12,64 +15,76 @@ func main() {
 	})
 
 	r.GET("/about", func(c *gin.Context) {
-		c.HTML(200, "index.html", gin.H{})
+		c.HTML(200, "index.html", gin.H{
+			"Title": "About",
+		})
 	})
 
 	r.GET("/portfolio", func(c *gin.Context) {
 		c.HTML(200, "portfolio.html", gin.H{
-			"Title": "Portfolio",
+			"Title":     "Portfolio",
 			"MainTitle": "Bogrik",
-			"SubTitle": "Portfolio",
+			"SubTitle":  "Portfolio",
 		})
 	})
 
+	r.GET("/store", func(c *gin.Context) {
+		c.HTML(200, "store.html", gin.H{
+			"Title":     "Order",
+			"MainTitle": "Order",
+			"SubTitle":  "Order",
+		})
+	})
+
+	r.POST("/order", backend.HandleForm)
+
 	r.GET("/digital-painting", func(c *gin.Context) {
 		c.HTML(200, "digital-painting.html", gin.H{
-			"Title": "Digital Painting",
+			"Title":     "Digital Painting",
 			"MainTitle": "Digital Painting",
-			"SubTitle": "Bogrik",
+			"SubTitle":  "Bogrik",
 		})
 	})
 	r.GET("/malutka-pig", func(c *gin.Context) {
 		c.HTML(200, "malutka-pig.html", gin.H{
-			"Title": "Malutka Pig",
+			"Title":     "Malutka Pig",
 			"MainTitle": "Malutka Pig",
-			"SubTitle": "Bogrik",
+			"SubTitle":  "Bogrik",
 		})
 	})
 	r.GET("/weird", func(c *gin.Context) {
 		c.HTML(200, "weird.html", gin.H{
-			"Title": "Weird",
+			"Title":     "Weird",
 			"MainTitle": "Weird",
-			"SubTitle": "Bogrik",
+			"SubTitle":  "Bogrik",
 		})
 	})
 	r.GET("/random", func(c *gin.Context) {
 		c.HTML(200, "random.html", gin.H{
-			"Title": "Random",
+			"Title":     "Random",
 			"MainTitle": "Random",
-			"SubTitle": "Bogrik",
+			"SubTitle":  "Bogrik",
 		})
 	})
 	r.GET("/moral", func(c *gin.Context) {
 		c.HTML(200, "moral.html", gin.H{
-			"Title": "Moral",
+			"Title":     "Moral",
 			"MainTitle": "Moral",
-			"SubTitle": "Bogrik",
+			"SubTitle":  "Bogrik",
 		})
 	})
 	r.GET("/marvin", func(c *gin.Context) {
 		c.HTML(200, "marvin.html", gin.H{
-			"Title": "Marvin",
+			"Title":     "Marvin",
 			"MainTitle": "Marvin",
-			"SubTitle": "Bogrik",
+			"SubTitle":  "Bogrik",
 		})
 	})
 	r.GET("/unibo", func(c *gin.Context) {
 		c.HTML(200, "unibo.html", gin.H{
-			"Title": "UniBo",
+			"Title":     "UniBo",
 			"MainTitle": "UniBo",
-			"SubTitle": "Bogrik",
+			"SubTitle":  "Bogrik",
 		})
 	})
 
