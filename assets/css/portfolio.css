@@ -1,11 +1,16 @@
 .banner {
-    background-color: var(--yellow-color); 
-    width: 100%;
     padding: clamp(1rem, 1vw, 5rem);
     color: var(--white-color);
     justify-content: center;
     align-items: center;
     font-size: clamp(14px, 3vw, 30px);
+}
+
+.banner span {
+    background-color: var(--grey-color);
+    border-radius: 137px;
+    font-size: clamp(24px, 4.5vw, 48px);
+    padding: clamp(7px, 1vw, 20px) clamp(10px, 3vw, 30px);
 }
 
 .flex-row{

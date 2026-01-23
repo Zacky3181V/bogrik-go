@@ -46,7 +46,38 @@ nav a.yellow{ background-color: var(--yellow-color);}
 nav a.secondary{ background-color: var(--secondary-color); }
 nav a.pink-red{ background-color: var(--pink-red-color);}
 nav a.grey { background-color: var(--grey-color);}
+nav a.coming-soon {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
 
+.coming-soon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.coming-soon-tooltip {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8px);
+  transform: translateX(-50%) translateY(-5px);
+  background: rgba(0, 0, 0, 0.85);
+  color: var(--white-color);
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.coming-soon-wrapper.show-tooltip .coming-soon-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 
 nav ul{
   display: flex;
@@ -60,6 +91,8 @@ nav ul{
   border-radius: var(--border-radius);
   width: fit-content;
 }
+
+
 /* ------------ */
 /* navbar end   */
 /* ------------ */

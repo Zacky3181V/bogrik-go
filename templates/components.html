@@ -23,7 +23,12 @@
         <ul>
             <li><a class="grey" href="/">About</a></li>
             <li><a class="secondary" href="/portfolio">Portfolio</a></li>
-            <li><a class="yellow" href="#">Store</a></li>
+            <li class="nav-item coming-soon-wrapper">
+              <a class="yellow coming-soon" aria-disabled="true" href="javascript:void(0)">
+                Store
+              </a>
+              <span class="coming-soon-tooltip">Coming soon</span>
+            </li>
             <li><a class="pink-red" href="/order">Order</a></li>
         </ul>
     </nav>
@@ -80,8 +85,8 @@
 </section>
 {{ end }}
 
-{{ define "javascript" }}
-<script src="/assets/js/footer-animation.js"></script>
-<script src="/assets/js/parallax.js"></script>
-<script src="/assets/js/form-submission.js"></script>
+{{ define "scripts" }}
+  {{ range .Scripts }}
+    <script src="{{ . }}"></script>
+  {{ end }}
 {{ end }}

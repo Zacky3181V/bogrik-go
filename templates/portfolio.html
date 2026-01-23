@@ -6,7 +6,9 @@
 </head>
 <body>
     {{ template "navbar" . }}
-    <section class="banner flex-row">Portfolio</section>
+    <section class="banner flex-row">
+      <span>Portfolio</span>
+    </section>
 
     <div class="flex-col">
       <a href="/weird" class="button-menu button-image bg-weird"> Weird</a>
@@ -19,7 +21,6 @@
     </div>
 
     {{ template "footer" . }}
-<script src="/assets/js/footer-animation.js"></script>
-<script src="/assets/js/parallax.js"></script>
+    {{ template "scripts" . }}
 </body>
 </html>
