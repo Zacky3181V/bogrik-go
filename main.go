@@ -11,7 +11,9 @@ func main() {
 	r.LoadHTMLGlob("templates/*.html")
 	r.Static("/assets-compressed", "./assets-compressed")
 	r.GET("/", func(c *gin.Context) {
-		c.HTML(200, "index.html", gin.H{})
+		c.HTML(200, "index.html", gin.H{
+			"Title": "About",
+		})
 	})
 
 	r.GET("/about", func(c *gin.Context) {
@@ -28,7 +30,7 @@ func main() {
 		})
 	})
 
-	r.GET("/store", func(c *gin.Context) {
+	r.GET("/order", func(c *gin.Context) {
 		c.HTML(200, "store.html", gin.H{
 			"Title":     "Order",
 			"MainTitle": "Order",

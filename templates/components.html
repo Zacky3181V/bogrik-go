@@ -1,11 +1,14 @@
 {{ define "head" }}
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ .Title }}</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-<link rel="shortcut icon" type="image/x-icon" href="/assets-compressed/B-logo1.png" />
-<link rel="stylesheet" href="/assets-compressed/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="icon" type="image/png" href="/assets-compressed/favicon.ico" />
+    <link rel="stylesheet" href="/assets-compressed/styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 {{ end }}
 
 {{ define "header" }}
@@ -15,69 +18,70 @@
 {{ end }}
 
 {{ define "navbar" }}
-<div class="d-flex justify-content-center my-4">
-  <div class="bg-light-grey rounded-55 px-4 py-4 d-flex gap-1">
-    <a class="btn responsive-btn-text btn-outline-pink btn-pink rounded-55 px-4 font-size-40" href="/about">About</a>
-    <a class="btn responsive-btn-text btn-outline-yellow btn-yellow rounded-55 px-4 font-size-40" href="/portfolio">Portfolio</a>
-    <a class="btn responsive-btn-text btn-outline-red btn-red rounded-55 px-4 font-size-40" href="/store">Order</a>
-  </div>
-</div>
+<header class="animate-in animate-short-top-bottom">
+    <nav>
+        <ul>
+            <li><a class="grey" href="/">About</a></li>
+            <li><a class="secondary" href="/portfolio">Portfolio</a></li>
+            <li><a class="yellow" href="#">Store</a></li>
+            <li><a class="pink-red" href="/order">Order</a></li>
+        </ul>
+    </nav>
+</header>
 {{ end }}
 
 {{ define "footer" }}
-<div class="full-width-bar bg-pink d-flex flex-column align-items-center">
-  <div class="container my-4 full-width-bar">
-    <div class="bg-light-grey rounded-55 py-5 px-5 w-70 mx-auto">
-      
-      <div class="row align-items-stretch justify-content-center">
-        
-        <!-- Social Links -->
-        <div class="col-12 col-md-6 order-1 order-md-2 mb-4 mb-md-0 d-flex flex-column">
-          <div class="d-flex flex-column flex-grow-1 justify-content-between align-items-center w-100">
-
-            <!-- Instagram -->
-            <div class="d-flex bg-pr flex-grow-1 w-100 mb-5 rounded-55">
-              <!-- Image: 1/3 -->
-              <div class="d-flex justify-content-center align-items-center" style="flex-basis: 33%;">
-                <img src="/assets-compressed/instagram.svg" alt="instagram link" class="responsive-icon">
-              </div>
-              <!-- Text: 2/3 -->
-              <div class="d-flex align-items-center" style="flex-basis: 67%;">
-                <span class="responsive-btn-text text-white">bogrik.art</span>
-              </div>
-            </div>
-
-            <!-- TikTok 1 -->
-            <div class="d-flex bg-y flex-grow-1 w-100 mb-5 rounded-55">
-              <div class="d-flex justify-content-center align-items-center" style="flex-basis: 33%;">
-                <img src="/assets-compressed/tiktok.svg" alt="tiktok link" class="responsive-icon">
-              </div>
-              <div class="d-flex align-items-center" style="flex-basis: 67%;">
-                <span class="responsive-btn-text text-white">.bogrik</span>
-              </div>
-            </div>
-
-            <!-- TikTok 2 -->
-            <div class="d-flex bg-g flex-grow-1 w-100 rounded-55">
-              <div class="d-flex justify-content-center align-items-center" style="flex-basis: 33%;">
-                <img src="/assets-compressed/tiktok.svg" alt="tiktok link" class="responsive-icon">
-              </div>
-              <div class="d-flex align-items-center" style="flex-basis: 67%;">
-                <span class="responsive-btn-text text-white">.bogrik</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Logo -->
-        <div class="col-12 col-md-6 text-center order-2 order-md-1 d-flex align-items-center justify-content-center bg-pink rounded-55">
-          <img src="/assets-compressed/logo-even-smaller.png" alt="Bogrik logo" class="img-fluid"/>
-        </div>
-
+<footer>
+    <div class="grid">
+      <img class="pink-bottom" src="/assets-compressed/index/pink-wave.png" alt="pink wave">
+      <img class="pink-red-bottom" src="/assets-compressed/index/bottom-pink-red-wave.png" alt="qpink red wave">
+      <div class="xy-center icons-pt animate-in animate-short">
+        <a href="https://www.instagram.com/bogrik.art" target="_blank" class="grey-bg align-text">
+          <img class="bottom-icons" src="/assets-compressed/instagram.svg" alt="instagram link">
+          <span>bogrik.art</span>
+        </a>
+        <a href="https://www.tiktok.com/@.bogrik" target="_blank" class="grey-bg align-text">
+          <img class="bottom-icons" src="/assets-compressed/tiktok.svg" alt="tiktok link">
+          <span>.bogrik</span>
+        </a>
       </div>
+      <img class="yellow" src="/assets-compressed/index/yellow-wave-123.png" alt="yellow wave" style="z-index:1;">
     </div>
-  </div>
-</div>
+</footer>
 {{ end }}
 
+{{ define "form" }}
+<section class="section-contact">
+  <form id="orderForm" action="/order" method="POST" enctype="multipart/form-data">
+    <div class="flex">
+        <div class="card">
+            <div class="field">
+                <label>Email</label>
+                <input class="indie-flower-regular" type="email" name="email" placeholder="user@example.com" required>
+            </div>
+            <div class="field">
+                <label >Description</label>
+                <textarea class="indie-flower-regular"  name="description" rows="4" placeholder="Write down your thoughts..." required></textarea>
+            </div>
+            <div class="field">
+                <label >References (max 5MB)</label>
+                <input type="file" name="references" accept="image/*" class="form-control" id="fileInput" multiple>
+            </div>
+            <div class="checkbox">
+                <input  name="marketingConsent" type="checkbox" id="agreeCheck">
+                <label for="agreeCheck">
+                    I agree to receive marketing emails
+                </label>
+            </div>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+  </form>
+</section>
+{{ end }}
+
+{{ define "javascript" }}
+<script src="/assets-compressed/footer-animation.js"></script>
+<script src="/assets-compressed/parallax.js"></script>
+<script src="/assets-compressed/form-submission.js"></script>
+{{ end }}

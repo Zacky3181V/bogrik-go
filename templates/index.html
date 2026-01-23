@@ -1,28 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="stylesheet" href="/assets-compressed/styles.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    {{ template "head" . }}
 </head>
 <body>
-    <header class="animate-in animate-short-top-bottom">
-        <nav>
-            <ul>
-                <li><a class="grey" href="/">About</a></li>
-                <li><a class="secondary" href="/portfolio">Portfolio</a></li>
-                <li><a class="yellow" href="/store">Store</a></li>
-                <li><a class="pink-red" href="#">Order</a></li>
-            </ul>
-        </nav>
-    </header>
+    {{ template "navbar" . }}
     <main>
         <div class="grid">
           <img class="pink-top parallax" data-speed="0.6" data-direction="down" data-limit="30" src="/assets-compressed/index/pink-wave.png" alt="pink wave">
@@ -61,56 +43,8 @@
       </p>
     </section>
     <img src="/assets-compressed/index/about-bg.png">
-    <section class="section-contact">
-      <form id="orderForm" action="/order" method="POST" enctype="multipart/form-data">
-        <div class="flex">
-            <div class="card">
-                <div class="field">
-                    <label>Email</label>
-                    <input class="indie-flower-regular" type="email" name="email" placeholder="user@example.com" required>
-                </div>
-
-                <div class="field">
-                    <label >Description</label>
-                    <textarea class="indie-flower-regular"  name="description" rows="4" placeholder="Write down your thoughts..." required></textarea>
-                </div>
-
-                <div class="field">
-                    <label >References (max 5MB)</label>
-                    <input type="file" name="references" accept="image/*" class="form-control" id="fileInput" multiple>
-                </div>
-
-                <div class="checkbox">
-                    <input  name="marketingConsent" type="checkbox" id="agreeCheck">
-                    <label for="agreeCheck">
-                        I agree to receive marketing emails
-                    </label>
-                </div>
-
-                <button type="submit">Submit</button>
-            </div>
-        </div>
-      </form>
-    </section>
-    <footer>
-        <div class="grid">
-          <img class="pink-bottom" src="/assets-compressed/index/pink-wave.png" alt="pink wave">
-          <img class="pink-red-bottom" src="/assets-compressed/index/bottom-pink-red-wave.png" alt="qpink red wave">
-          <div class="xy-center icons-pt animate-in animate-short">
-            <a href="https://www.instagram.com/bogrik.art" target="_blank" class="grey-bg align-text">
-              <img class="bottom-icons" src="/assets-compressed/instagram.svg" alt="instagram link">
-              <span>bogrik.art</span>
-            </a>
-            <a href="https://www.tiktok.com/@.bogrik" target="_blank" class="grey-bg align-text">
-              <img class="bottom-icons" src="/assets-compressed/tiktok.svg" alt="tiktok link">
-              <span>.bogrik</span>
-            </a>
-          </div>
-          <img class="yellow" src="/assets-compressed/index/yellow-wave-123.png" alt="yellow wave" style="z-index:1;">
-        </div>
-    </footer>
-<script src="/assets-compressed/footer-animation.js"></script>
-<script src="/assets-compressed/parallax.js"></script>
-<script src="/assets-compressed/form-submission.js"></script>
+    {{ template "form" . }}
+    {{ template "footer" . }}
+    {{ template "javascript" . }}
 </body>
 </html>

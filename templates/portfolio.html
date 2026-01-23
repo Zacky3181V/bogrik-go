@@ -1,29 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="stylesheet" href="/assets-compressed/styles.css"> 
+    {{ template "head" . }}
     <link rel="stylesheet" href="/assets-compressed/portfolio.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="animate-in animate-short-top-bottom">
-        <nav>
-            <ul>
-                <li><a class="grey" href="/">About</a></li>
-                <li><a class="secondary" href="/portfolio">Portfolio</a></li>
-                <li><a class="yellow" href="/store">Store</a></li>
-                <li><a class="pink-red" href="/order">Order</a></li>
-            </ul>
-        </nav>
-    </header>
+    {{ template "navbar" . }}
     <section class="banner flex-row">Portfolio</section>
 
     <div class="flex-col">
@@ -36,23 +18,7 @@
       <a href="/unibo" class="button-menu button-image bg-unibo"></a>
     </div>
 
-    <footer>
-        <div class="grid">
-          <img class="pink-bottom" src="/assets-compressed/index/pink-wave.png" alt="pink wave">
-          <img class="pink-red-bottom" src="/assets-compressed/index/bottom-pink-red-wave.png" alt="qpink red wave">
-          <div class="xy-center icons-pt animate-in animate-short">
-            <a href="https://www.instagram.com/bogrik.art" target="_blank" class="grey-bg align-text">
-              <img class="bottom-icons" src="/assets-compressed/instagram.svg" alt="instagram link">
-              <span>bogrik.art</span>
-            </a>
-            <a href="https://www.tiktok.com/@.bogrik" target="_blank" class="grey-bg align-text">
-              <img class="bottom-icons" src="/assets-compressed/tiktok.svg" alt="tiktok link">
-              <span>.bogrik</span>
-            </a>
-          </div>
-          <img class="yellow" src="/assets-compressed/index/yellow-wave-123.png" alt="yellow wave" style="z-index:1;">
-        </div>
-    </footer>
+    {{ template "footer" . }}
 <script src="/assets-compressed/footer-animation.js"></script>
 <script src="/assets-compressed/parallax.js"></script>
 </body>
