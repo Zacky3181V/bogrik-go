@@ -20,6 +20,15 @@
     gap: 1rem;
 }
 
+.flex-col a {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-decoration: none; 
+    color: var(--white-color);
+    border-radius: var(--border-radius);
+}
+
 .button-menu{
     width: clamp(200px, 80%, 600px);
     height: clamp(60px, 15vw, 120px);

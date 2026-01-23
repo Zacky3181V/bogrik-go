@@ -2,21 +2,18 @@
 <html lang="en">
 <head>
     {{ template "head" . }}
+    <link rel="stylesheet" href="/assets/css/photo-wall.css">
 </head>
 <body>
-    {{ template "header" . }}
     {{ template "navbar" . }}
-
-    <div class="d-flex flex-column align-items-center mt-5 px-3" style="width: 100%;">
+    <div class="photo-wall">
         
-        <img src="/assets/weird/weird1.png" class="mb-5 img-fluid" />
-        <img src="/assets/weird/weird12.png" class="mb-5 img-fluid" />
-        <img src="/assets/weird/weird13.png" class="mb-5 img-fluid" />
-        <img src="/assets/weird/weird14.png" class="mb-5 img-fluid" />
-        <img src="/assets/weird/weird15.png" class="mb-5 img-fluid" />
+        <img src="/assets/weird/weird1.png" />
+        <img src="/assets/weird/weird12.png" />
+        <img src="/assets/weird/weird13.png" />
+        <img src="/assets/weird/weird14.png" />
+        <img src="/assets/weird/weird15.png" />
         
-
-    </div>
 
     </div>
     {{ template "navbar" . }}
