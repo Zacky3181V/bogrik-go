@@ -9,7 +9,7 @@ func main() {
 	r := gin.Default()
 
 	r.LoadHTMLGlob("templates/*.html")
-	r.Static("/assets-compressed", "./assets-compressed")
+	r.Static("/assets", "./assets")
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(200, "index.html", gin.H{
 			"Title": "About",

@@ -35,13 +35,13 @@
     border: none;
 } 
 
-.bg-digital {background-image: url('/assets-compressed/digitalpainting1.png');}
-.bg-malutka {background-image: url('/assets-compressed/malutkapig1.png');}
-.bg-weird {background-image: url('/assets-compressed/weird1.png');}
-.bg-random { background-image: url('/assets-compressed/random1.png')}
-.bg-moral {background-image: url('/assets-compressed/moral1.png')}
-.bg-marvin {background-image: url('/assets-compressed/marvin1.png')}
-.bg-unibo {background-image: url('/assets-compressed/unibo1.png')}
+.bg-digital {background-image: url('/assets/portfolio/digitalpainting1.png');}
+.bg-malutka {background-image: url('/assets/portfolio/malutkapig1.png');}
+.bg-weird {background-image: url('/assets/portfolio/weird1.png');}
+.bg-random { background-image: url('/assets/portfolio/random1.png')}
+.bg-moral {background-image: url('/assets/portfolio/moral1.png')}
+.bg-marvin {background-image: url('/assets/portfolio/marvin1.png')}
+.bg-unibo {background-image: url('/assets/portfolio/unibo1.png')}
 
 
 
