@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{ template "head" . }}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" href="/assets-compressed/styles.css"> 
+    <link rel="stylesheet" href="/assets-compressed/portfolio.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
-    {{ template "header" . }}
-    {{ template "navbar" . }}
-    <div class="d-flex justify-content-center my-4">
-        <div class="bg-light-grey text-center rounded-55 px-4 py-4 d-flex gap-1">
-          
-          <h2 class="text-center portfolio-subtitle rounded-55 text-g trim-font-gap">{{ .SubTitle }}</h2>
-        </div>
-      </div>
-    <div class="d-flex flex-column align-items-center mt-5 bg-light-grey rounded-55 mx-auto" style="width: 80%;">
-        <a class="btn btn-secondary rounded-55 mt-8 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-digital" href="/digital-painting">Digital Painting</a>
-        <a class="btn btn-secondary rounded-55 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-malutka" href="/malutka-pig">Malutka Pig</a>
-        <a class="btn btn-secondary rounded-55 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-weird" href="/weird">Weird</a>
-        <a class="btn btn-secondary rounded-55 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-random" href="/random">Random</a>
-        <a class="btn btn-secondary rounded-55 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-moral" href="/moral">Moral</a>
-        <a class="btn btn-secondary rounded-55 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-marvin" href="/marvin">Marvin's Adventure</a>
-        <a class="btn btn-secondary rounded-55 mb-8 mb-md-6 mg-lg-6 w-75 btn-lg tall-btn responsive-btn-text btn-image bg-unibo" href="/unibo">UniBo</a>
+    <header class="animate-in animate-short-top-bottom">
+        <nav>
+            <ul>
+                <li><a class="grey" href="/">About</a></li>
+                <li><a class="secondary" href="/portfolio">Portfolio</a></li>
+                <li><a class="yellow" href="/store">Store</a></li>
+                <li><a class="pink-red" href="/order">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner flex-row">Portfolio</section>
+
+    <div class="flex-col">
+      <a href="/weird" class="button-menu button-image bg-weird"></a>
+      <a href="/digital-painting" class="button-menu button-image bg-digital"></a>
+      <a href="/malutka-pig" class="button-menu button-image bg-malutka"></a>
+      <a href="/random" class="button-menu button-image bg-random"></a>
+      <a href="/moral" class="button-menu button-image bg-moral"></a>
+      <a href="/marvin" class="button-menu button-image bg-marvin"></a>
+      <a href="/unibo" class="button-menu button-image bg-unibo"></a>
     </div>
 
-    {{ template "navbar" . }}
-
-  {{ template "footer" . }}
+    <footer>
+        <div class="grid">
+          <img class="pink-bottom" src="/assets-compressed/index/pink-wave.png" alt="pink wave">
+          <img class="pink-red-bottom" src="/assets-compressed/index/bottom-pink-red-wave.png" alt="qpink red wave">
+          <div class="xy-center icons-pt animate-in animate-short">
+            <a href="https://www.instagram.com/bogrik.art" target="_blank" class="grey-bg align-text">
+              <img class="bottom-icons" src="/assets-compressed/instagram.svg" alt="instagram link">
+              <span>bogrik.art</span>
+            </a>
+            <a href="https://www.tiktok.com/@.bogrik" target="_blank" class="grey-bg align-text">
+              <img class="bottom-icons" src="/assets-compressed/tiktok.svg" alt="tiktok link">
+              <span>.bogrik</span>
+            </a>
+          </div>
+          <img class="yellow" src="/assets-compressed/index/yellow-wave-123.png" alt="yellow wave" style="z-index:1;">
+        </div>
+    </footer>
+<script src="/assets-compressed/footer-animation.js"></script>
+<script src="/assets-compressed/parallax.js"></script>
 </body>
 </html>
-
-    
-
