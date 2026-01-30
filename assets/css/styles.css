@@ -255,6 +255,7 @@ currently overlap is visible. Hide it. */
   max-width: clamp(250px, 80vw, 350px);
   margin: 0; 
 }
+
 .section-weird .content-column a{
   text-decoration: none; 
   color: var(--white-color);
@@ -265,6 +266,40 @@ currently overlap is visible. Hide it. */
   font-size: clamp(24px, 4.5vw, 48px);
   padding: clamp(7px, 1vw, 20px) clamp(10px, 3vw, 30px);
 }
+
+/* common hidden state for fade-in */
+.section-weird .fade-in {
+  opacity: 0;
+  transform: translateX(50px); /* right -> center by default */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* visible state applied via JS */
+.section-weird .fade-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* special: image comes from left */
+.section-weird div .image-column.fade-in {
+  transform: translateX(-50px);
+}
+.section-weird div .image-column.fade-in.visible {
+  transform: translateX(0px);
+}
+
+/* sequential delay for content children */
+.section-weird .content-column a.fade-in {
+  transition-delay: 0.2s;
+}
+.section-weird .content-column p.fade-in {
+  transition-delay: 0.6s;
+}
+.section-weird .content-column img.fade-in {
+  transition-delay: 1.2s;
+}
+
+
 .indie-flower-regular {
   font-family: "Indie Flower", cursive;
   font-weight: 400;
