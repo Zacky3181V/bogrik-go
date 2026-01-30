@@ -51,6 +51,7 @@ func main() {
 			"Scripts": []string{
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
 			},
 			
 		})
@@ -61,6 +62,7 @@ func main() {
 			"Scripts": []string{
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
 			},
 		})
 	})
@@ -70,6 +72,7 @@ func main() {
 			"Scripts": []string{
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
 			},
 		})
 	})
@@ -79,6 +82,7 @@ func main() {
 			"Scripts": []string{
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
 			},
 		})
 	})
@@ -88,6 +92,7 @@ func main() {
 			"Scripts": []string{
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
 			},
 		})
 	})
@@ -97,6 +102,7 @@ func main() {
 			"Scripts": []string{
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
 			},
 		})
 	})
@@ -106,9 +112,10 @@ func main() {
 			"Scripts": []string{
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
 			},
 		})
 	})
 
-	r.Run(":8085")
+	r.Run("0.0.0.0:8085")
 }

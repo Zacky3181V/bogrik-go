@@ -3,22 +3,26 @@
 <head>
     {{ template "head" . }}
     <link rel="stylesheet" href="/assets/css/photo-wall.css">
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
 </head>
 <body>
-    {{ template "header" . }}
     {{ template "navbar" . }}
+    {{ template "header" . }}
     <div class="photo-wall">
-        <img src="/assets/digital-painting/digital-1.png" />
-        <img src="/assets/digital-painting/digital-2.png" />
-        <img src="/assets/digital-painting/digital-3.png" />
-        <img src="/assets/digital-painting/digital-4.png" />
-        <img src="/assets/digital-painting/digital-5.png" />
-        <img src="/assets/digital-painting/digital-6.png" />
-        <img src="/assets/digital-painting/digital-7.png" />
-        <img src="/assets/digital-painting/digital-8.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-1.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-2.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-3.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-4.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-5.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-6.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-7.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-8.png" />
     
     </div>
+    <div id="overlay">
 
+        <img id="overlay-img" />
+    </div>
     {{ template "navbar" . }}
 
   {{ template "footer" . }}

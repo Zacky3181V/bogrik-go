@@ -3,36 +3,40 @@
 <head>
     {{ template "head" . }}
     <link rel="stylesheet" href="/assets/css/photo-wall.css">
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
 </head>
 <body>
     {{ template "navbar" . }}
-
+    {{ template "header" . }}
     <div class="photo-wall">
-        <img src="/assets/unibo/unibo1.png" />
-        <img src="/assets/unibo/unibo2.png" />
-        <img src="/assets/unibo/unibo3.png" />
-        <img src="/assets/unibo/unibo4.png" />
-        <img src="/assets/unibo/unibo5.png" />
-        <img src="/assets/unibo/unibo6.png" />
-        <img src="/assets/unibo/unibo7.png" />
-        <img src="/assets/unibo/unibo8.png" />
-        <img src="/assets/unibo/unibo9.png" />
-        <img src="/assets/unibo/unibo10.png" />
-        <img src="/assets/unibo/unibo11.png" />
-        <img src="/assets/unibo/unibo12.png" />
-        <img src="/assets/unibo/unibo13.png" />
-        <img src="/assets/unibo/unibo14.png" />
-        <img src="/assets/unibo/unibo15.png" />
-        <img src="/assets/unibo/unibo16.png" />
-        <img src="/assets/unibo/unibo17.png" />
-        <img src="/assets/unibo/unibo18.png" />
-        <img src="/assets/unibo/unibo19.png" />
-        <img src="/assets/unibo/unibo20.png" />
-        <img src="/assets/unibo/unibo21.png" />
-        <img src="/assets/unibo/unibo22.png" />
+        <img class="zoomable" src="/assets/unibo/unibo1.png" />
+        <img class="zoomable" src="/assets/unibo/unibo2.png" />
+        <img class="zoomable" src="/assets/unibo/unibo3.png" />
+        <img class="zoomable" src="/assets/unibo/unibo4.png" />
+        <img class="zoomable" src="/assets/unibo/unibo5.png" />
+        <img class="zoomable" src="/assets/unibo/unibo6.png" />
+        <img class="zoomable" src="/assets/unibo/unibo7.png" />
+        <img class="zoomable" src="/assets/unibo/unibo8.png" />
+        <img class="zoomable" src="/assets/unibo/unibo9.png" />
+        <img class="zoomable" src="/assets/unibo/unibo10.png" />
+        <img class="zoomable" src="/assets/unibo/unibo11.png" />
+        <img class="zoomable" src="/assets/unibo/unibo12.png" />
+        <img class="zoomable" src="/assets/unibo/unibo13.png" />
+        <img class="zoomable" src="/assets/unibo/unibo14.png" />
+        <img class="zoomable" src="/assets/unibo/unibo15.png" />
+        <img class="zoomable" src="/assets/unibo/unibo16.png" />
+        <img class="zoomable" src="/assets/unibo/unibo17.png" />
+        <img class="zoomable" src="/assets/unibo/unibo18.png" />
+        <img class="zoomable" src="/assets/unibo/unibo19.png" />
+        <img class="zoomable" src="/assets/unibo/unibo20.png" />
+        <img class="zoomable" src="/assets/unibo/unibo21.png" />
+        <img class="zoomable" src="/assets/unibo/unibo22.png" />
     </div>
 
+    <div id="overlay">
 
+        <img id="overlay-img" />
+    </div>
     {{ template "navbar" . }}
 
   {{ template "footer" . }}

@@ -3,24 +3,26 @@
 <head>
     {{ template "head" . }}
     <link rel="stylesheet" href="/assets/css/photo-wall.css">
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
 </head>
 <body>
-    {{ template "header" . }}
     {{ template "navbar" . }}
+    {{ template "header" . }}
 
     <div class="photo-wall">
-        <img src="/assets/malutka-pig/malutka-pig1.png" />
-        
-        <img src="/assets/malutka-pig/malutka-pig2.png" />
-        <img src="/assets/malutka-pig/malutka-pig3.png" />
+        <img class="zoomable" src="/assets/malutka-pig/malutka-pig1.png" />
+        <img class="zoomable" src="/assets/malutka-pig/malutka-pig2.png" />
+        <img class="zoomable" src="/assets/malutka-pig/malutka-pig3.png" />
+        <img class="zoomable" src="/assets/malutka-pig/malutka-pig4.png" />
+        <img class="zoomable" src="/assets/malutka-pig/malutka-pig5.png" />
+        <img class="zoomable" src="/assets/malutka-pig/malutka-pig6.png" />
+        <img class="zoomable" src="/assets/malutka-pig/malutka-pig7.png" />
+        <img class="zoomable" src="/assets/malutka-pig/malutka-pig8.png" />
+        <img class="zoomable" src="/assets/malutka-pig/malutka-pig9.png" />
+    </div>
+    <div id="overlay">
 
-        <img src="/assets/malutka-pig/malutka-pig4.png" />
-        <img src="/assets/malutka-pig/malutka-pig5.png" />
-        <img src="/assets/malutka-pig/malutka-pig6.png" />
-        
-        <img src="/assets/malutka-pig/malutka-pig7.png" />
-        <img src="/assets/malutka-pig/malutka-pig8.png" />
-        <img src="/assets/malutka-pig/malutka-pig9.png" />
+        <img id="overlay-img" />
     </div>
     {{ template "navbar" . }}
 
