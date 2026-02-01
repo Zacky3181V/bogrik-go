@@ -123,6 +123,12 @@ main {
   z-index:1;
 }
 
+.grid .yellow-bottom {
+  padding-top: 0;
+  margin-top: auto;
+  z-index:1;
+}
+
 .grid .hello {
   grid-area: 1/1;
   align-self: end;
@@ -337,7 +343,7 @@ currently overlap is visible. Hide it. */
 
 .section-about .fade-in {
   opacity: 0;
-  transform: translateY(50px); /* right -> center by default */
+  transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
@@ -531,6 +537,40 @@ footer {
   will-change: transform;
 }
 
+.grid .fade-in {
+  transform: translateY(clamp(15px, 5vw, 100px));
+  transition:
+    opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+}
+
+.grid .fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.grid .pink-bottom.fade-in {
+  transition-delay: 0s;
+}
+
+.grid .pink-red-bottom.fade-in {
+  transition-delay: 0.2s;
+}
+
+.grid .yellow-bottom.fade-in {
+  transition-delay: 0s
+}
+/*
+.grid .yellow-bottom.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.grid .yellow-bottom.fade-in.visible{
+  opacity: 1;
+  transform: translateY(0);
+} */
 /* -------------- */
 /* animations end */
 /* -------------- */
