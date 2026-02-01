@@ -134,7 +134,7 @@ main {
   align-self: end;
   justify-self: center;
   z-index: 2;
-  padding-bottom: clamp(1rem, 3vw, 3rem); /* adjust as needed */
+  padding-bottom: clamp(0.5em, 1.2vw, 2em);
   font-size: clamp(12px, 4vw, 36px);
   font-weight: bold;
   color: var(--white-color); /* or any color you prefer */
@@ -505,6 +505,14 @@ footer {
 /* footer end */
 /* ----- */
 
+/* ----- */
+/* footer parallax start */
+/* ----- */
+
+/* ----- */
+/* footer parallax end */
+/* ----- */
+
 /* ---------------- */
 /* animations start */
 /* ---------------- */
@@ -536,41 +544,7 @@ footer {
 .parallax {
   will-change: transform;
 }
-
-.grid .fade-in {
-  transform: translateY(clamp(15px, 5vw, 100px));
-  transition:
-    opacity 0.4s ease-out,
-    transform 0.4s ease-out;
-}
-
-.grid .fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.grid .pink-bottom.fade-in {
-  transition-delay: 0s;
-}
-
-.grid .pink-red-bottom.fade-in {
-  transition-delay: 0.2s;
-}
-
-.grid .yellow-bottom.fade-in {
-  transition-delay: 0s
-}
-/*
-.grid .yellow-bottom.fade-in {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.grid .yellow-bottom.fade-in.visible{
-  opacity: 1;
-  transform: translateY(0);
-} */
 /* -------------- */
 /* animations end */
 /* -------------- */
+
