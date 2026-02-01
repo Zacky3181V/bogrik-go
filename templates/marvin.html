@@ -2,21 +2,27 @@
 <html lang="en">
 <head>
     {{ template "head" . }}
+    <link rel="stylesheet" href="/assets/css/photo-wall.css">
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
 </head>
 <body>
-    {{ template "header" . }}
     {{ template "navbar" . }}
+    {{ template "header" . }}
 
-    <div class="d-flex flex-column align-items-center mt-5 px-3" style="width: 100%;">
-        <img src="/assets-compressed/marvin/mavin1.png" class="mb-5 img-fluid" />
-        <img src="/assets-compressed/marvin/mavin2.png" class="mb-5 img-fluid" />
-        <img src="/assets-compressed/marvin/mavin3.png" class="mb-5 img-fluid" />
-        <img src="/assets-compressed/marvin/mavin4.png" class="mb-5 img-fluid" />
+    <div class="photo-wall">
+        <img class="zoomable" src="/assets/marvin/mavin1.png" />
+        <img class="zoomable" src="/assets/marvin/mavin2.png" />
+        <img class="zoomable" src="/assets/marvin/mavin3.png" />
+        <img class="zoomable" src="/assets/marvin/mavin4.png" />
 
     </div>
+    <div id="overlay">
 
+        <img id="overlay-img" />
+    </div>
     {{ template "navbar" . }}
 
   {{ template "footer" . }}
+  {{ template "scripts" . }}
 </body>
 </html>

@@ -2,25 +2,31 @@
 <html lang="en">
 <head>
     {{ template "head" . }}
+    <link rel="stylesheet" href="/assets/css/photo-wall.css">
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
 </head>
 <body>
-    {{ template "header" . }}
     {{ template "navbar" . }}
-    <div class="d-flex flex-column align-items-center mt-5 px-3" style="width: 100%;">
-        <img src="/assets-compressed/digital-painting/digital-1.png" class="mb-5 img-fluid" />
-        <img src="/assets-compressed/digital-painting/digital-2.png" class="mb-5 img-fluid" />
-        <img src="/assets-compressed/digital-painting/digital-3.png" class="mb-5 img-fluid" />
-        <img src="/assets-compressed/digital-painting/digital-4.png" class="mb-5 img-fluid" />
-        <img src="/assets-compressed/digital-painting/digital-5.png" class="mb-5 img-fluid" />
-        <img src="/assets-compressed/digital-painting/digital-6.png" class="mb-5 img-fluid" />
-        <img src="/assets-compressed/digital-painting/digital-7.png" class="mb-5 img-fluid" />
-        <img src="/assets-compressed/digital-painting/digital-8.png" class="mb-5 img-fluid" />
+    {{ template "header" . }}
+    <div class="photo-wall">
+        <img class="zoomable" src="/assets/digital-painting/digital-1.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-2.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-3.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-4.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-5.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-6.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-7.png" />
+        <img class="zoomable" src="/assets/digital-painting/digital-8.png" />
     
     </div>
+    <div id="overlay">
 
+        <img id="overlay-img" />
+    </div>
     {{ template "navbar" . }}
 
   {{ template "footer" . }}
+  {{ template "scripts" . }}
 </body>
 </html>
 

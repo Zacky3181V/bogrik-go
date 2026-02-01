@@ -24,7 +24,7 @@ WORKDIR /app
 
 COPY --from=builder /opt/app-root/src/bogrik-go .
 
-COPY --from=builder /opt/app-root/src/assets-compressed ./assets-compressed
+COPY --from=builder /opt/app-root/src/assets ./assets
 COPY --from=builder /opt/app-root/src/templates ./templates
 
 RUN chown -R 1001:0 /app && \

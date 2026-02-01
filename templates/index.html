@@ -2,58 +2,50 @@
 <html lang="en">
 <head>
     {{ template "head" . }}
-    
 </head>
 <body>
-        {{ template "navbar" . }}
-      <div class="full-width-bar d-flex flex-column align-items-center">
-        <img src="/assets-compressed/logo-smaller.png" alt="Logo" class="img-fluid logo-width logo-bg-primary"/>
-      </div>
-
-
-      <div class="d-flex justify-content-center my-4">
-        <div class="bg-light-grey text-center rounded-55 px-5 py-2 d-flex gap-1">
-          <span class="text-g my-4 h2">Hi :) I'm Bogrik <br> I'm glad to see you here (~^ ^) ~ </span>
+    {{ template "navbar" . }}
+    <main>
+        <div class="grid">
+          <img class="pink-top parallax" data-speed="0.6" data-direction="down" data-limit="30" src="/assets/index/pink-wave.png" alt="pink wave">
+          <img class="parallax pink-red-top" data-speed="0.4" data-direction="down" data-limit="20" src="/assets/index/top-pink-red-wave.png" alt="pink red wave">
+          <div class="xy-center logo-pb parallax animate-in animate-short" data-speed="1.0" data-direction="down" data-limit="30">
+            <img class="grey-rounded-logo" src="/assets/index/bogrik-logo.png" alt="logo">
+          </div>
+          <img class="yellow" src="/assets/index/top-yellow-wave.png" alt="yellow wave">
+          <h1 class="hello">HI :) I'm Bogrik, I'm glad to see you <br> here (~^ ^) ~ </h1>
         </div>
-      </div>
-
-      <div class="d-flex justify-content-center">
-        <div class="bg-pink rounded-55 px-5 py-4 text-center">
-          <span class="text-white font-size-96 portfolio-subtitle">about</span>
+    </main>
+    <section class="section-weird">
+      <div>
+        <div class="image-column fade-in">
+          <img src="/assets/index/weird-pic.png">
         </div>
-      </div>
-
-
-      <div class="d-flex justify-content-center my-4">
-        <div class="bg-light-grey rounded-55 px-5 py-5 d-flex flex-column align-items-center gap-3 w-70">
-          <p class="text-g h2 mb-4 index-text">
-            I am an artist from Ukraine. I work in different techniques, but I mostly create digital art. 
-          </p>
-          
-          <p class="text-g h2 mb-4 index-text">
-            I am not limited by a single style, and I enjoy experimenting with various techniques and materials to express ideas.
-          </p>
-          
-          <p class="text-g h2 mb-4 index-text">
-            Art feels like magic to me. It helps me bring any idea to life and create whole new worlds.
-          </p>
-          
-          <p class="text-g h2 mb-4 index-text">
-            I have been making art for over 10 years. I graduated from the art lyceum in Kyiv, and now I am studying illustration in Rotterdam.
-          </p>
-          
-          <p class="text-g h2 index-text" style="margin-bottom: -8px;">
-            I am open for illustration commissions and other creative projects
+        <div class="content-column">
+          <div class="flex-horizontal">
+            <a class="fade-in" href="/weird" target="_blank">
+              weird
+            </a>
+            <img class="fade-in" src="/assets/index/vector.svg">
+          </div>
+          <p class="indie-flower-regular fade-in">
+            I would like to invite you to check out my weird project. It is my main focus now,  so many updates and interesting things are coming soon!
           </p>
         </div>
       </div>
-
-      
-
-      {{template "navbar" .}}
-
-      
-
-  {{ template "footer" . }}
+    </section>
+    <section class="section-about">
+      <span class="fade-in">about</span>
+      <p class="indie-flower-regular fade-in">
+        I'm an artist from Ukraine. I work in different techniques, but I mostly create digital art. I am not limited by a single style, and I enjoy experimenting with various techniques and materials to express ideas. 
+        Art feels like magic to me. It helps me bring any idea to life and create whole new worlds.
+        I have been making art for over 10 years. I graduated from the art lyceum in Kyiv, and now I'm studying illustration in Rotterdam.
+        I'm open for illustration commissions and other creative projects
+      </p>
+    </section>
+    <img src="/assets/index/about-bg.png">
+    {{ template "form" . }}
+    {{ template "footer" . }}
+    {{ template "scripts" . }}    
 </body>
 </html>

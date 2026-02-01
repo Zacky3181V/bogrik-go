@@ -1,0 +1,60 @@
+.banner {
+    padding: clamp(1rem, 1vw, 5rem);
+    color: var(--grey-color);
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(14px, 3vw, 30px);
+}
+
+.banner span {
+    border-radius: 137px;
+    font-size: clamp(24px, 4.5vw, 48px);
+    padding: clamp(7px, 1vw, 20px) clamp(10px, 3vw, 30px);
+}
+
+.flex-row{
+    display: flex; 
+    flex-direction: row;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.flex-col a {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-decoration: none; 
+    color: var(--white-color);
+    border-radius: var(--border-radius);
+}
+
+.button-menu{
+    width: clamp(200px, 80%, 600px);
+    height: clamp(60px, 15vw, 120px);
+    display: block;
+    overflow: hidden;
+}
+
+.button-menu.button-image {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer; 
+    border: none;
+} 
+
+.bg-digital {background-image: url('/assets/portfolio/digitalpainting1.png');}
+.bg-malutka {background-image: url('/assets/portfolio/malutkapig1.png');}
+.bg-weird {background-image: url('/assets/portfolio/weird1.png');}
+.bg-random { background-image: url('/assets/portfolio/random1.png')}
+.bg-moral {background-image: url('/assets/portfolio/moral1.png')}
+.bg-marvin {background-image: url('/assets/portfolio/marvin1.png')}
+.bg-unibo {background-image: url('/assets/portfolio/unibo1.png')}
+
+
+

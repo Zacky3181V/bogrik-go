@@ -1,0 +1,550 @@
+:root{
+  --primary-color: #FF8DB7;
+  --secondary-color: #FFC0D7;
+  --yellow-color: #FFC300;
+  --red-color: #FF7474;
+  --grey-color: #A29298;
+  --light-grey-color: #FFF2F6;
+  --white-color: #FFFFFF;
+  --pink-red-color: #FF8DA0;
+
+  --border-radius: clamp(10px, 2vw, 25px);
+}
+
+* {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: clamp(12px, 2vw, 24px);
+}
+html, body{
+  height: 100%; 
+}
+body {
+  background-color: var(--light-grey-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------ */
+/* navbar start */
+/* ------------ */
+
+nav{
+  margin-bottom: clamp(4rem, 1vh, 8rem)
+}
+
+nav a { 
+  text-decoration: none;
+  color: white;
+  margin: 5px 5px;
+  padding: clamp(10px, 2vw, 20px) clamp(5px, 1vw, 20px) clamp(7px, 1vw, 20px) clamp(5px, 1vw, 20px);
+  border-radius: var(--border-radius)
+}
+
+nav a.yellow{ background-color: var(--yellow-color);}
+nav a.secondary{ background-color: var(--secondary-color); }
+nav a.pink-red{ background-color: var(--pink-red-color);}
+nav a.grey { background-color: var(--grey-color);}
+nav a.coming-soon {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.coming-soon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.coming-soon-tooltip {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8px);
+  transform: translateX(-50%) translateY(-5px);
+  background: rgba(0, 0, 0, 0.85);
+  color: var(--white-color);
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.coming-soon-wrapper.show-tooltip .coming-soon-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: clamp(5px, 1vw, 20px);
+  padding: 20px; /* use clamp here */
+  margin: 20px auto; /* use clamp here */
+  list-style: none;
+  background-color: var(--light-grey-color);
+  border-radius: var(--border-radius);
+  width: fit-content;
+}
+
+
+/* ------------ */
+/* navbar end   */
+/* ------------ */
+
+/* ------------ */
+/* main start   */
+/* ------------ */
+main {
+  /*flex: 1;*/          /* takes all remaining space */
+  position: relative;
+  z-index:1; 
+  max-height: 100vh;
+}
+
+.grid{
+  width: fit-content;
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr; 
+  place-items: center;
+  z-index: 10;
+}
+
+.grid .yellow{
+  padding-top: 0;
+  margin-top: auto;
+  z-index:1;
+}
+
+.grid .yellow-bottom {
+  padding-top: 0;
+  margin-top: auto;
+  z-index:1;
+}
+
+.grid .hello {
+  grid-area: 1/1;
+  align-self: end;
+  justify-self: center;
+  z-index: 2;
+  padding-bottom: clamp(0.75rem, 2dvw, 1.5rem);
+  font-size: clamp(12px, 4vw, 36px);
+  font-weight: bold;
+  color: var(--white-color); /* or any color you prefer */
+  text-align: center;
+}
+
+.grid .pink-top {
+  padding-bottom: clamp(5rem, 1vh, 15rem); 
+}
+.grid .pink-bottom {
+  padding-top: clamp(1.25rem, 1vh, 3.75rem); 
+}
+
+.grid .pink-red-top {
+  padding-top: clamp(2.5rem, 1vh, 7.5rem); 
+}
+
+.grid .pink-red-bottom {
+  padding-top: clamp(2.5rem, 1vh, 7.5rem); 
+}
+.grid > *{
+  grid-area: 1/1;
+  max-width: 100%;
+  height:auto;
+}
+
+.grid .xy-center{
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  gap: clamp(15px, 4vw, 48px);
+}
+
+.grid .logo-pb{
+  padding-bottom: clamp(10rem, 30vw, 15rem); 
+}
+
+.grid .xy-center .grey-rounded-logo{
+  background-color: var(--grey-color);
+  border-radius: 50%; 
+  width: clamp(135px, 30vw, 500px);
+  height: auto; 
+}
+
+.grid .xy-center .bottom-icons {
+  width: clamp(28px, 4vw, 56px);
+  height: auto; 
+}
+
+.grid .xy-center .icons-pt{
+  padding-top: clamp(10rem, 30vw, 15rem); 
+}
+
+.grid .xy-center .grey-bg {
+  background-color: var(--grey-color);
+  padding: clamp(8px, 1.5vw, 14px) 
+           clamp(12px, 3vw, 24px);
+  border-radius: clamp(10px, 2vw, 24px);
+}
+.grid .xy-center .align-text {
+  display: flex; 
+  align-items: center; 
+  
+  gap: 8px; /* clamp here */
+}
+
+.grid a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+
+
+/*TODO: finish up the bottom part of the waves. Fill with the yellow color or something
+currently overlap is visible. Hide it. */
+
+
+
+/* ------------ */
+/* main end   */
+/* ------------ */
+
+/* ------------ */
+/* .section-weird start*/
+/* ------------ */
+.section-weird {
+  position:relative;
+  z-index:10;
+  background-color: var(--light-grey-color);
+}
+
+.section-weird div{
+  display: flex;
+  align-items:flex-start;
+  margin: 0 auto;
+  max-width: clamp(300px, 90vw, 800px);
+  gap: clamp(20px, 5vw, 50px);
+  padding-top: 35px;
+}
+
+.section-weird div .image-column {
+  flex: 0 0 auto;
+}
+
+.section-weird div .image-column img {
+  height: auto;
+  display: block;
+  width: clamp(100px, 40vw, 350px);
+  max-width: 100%;
+}
+
+.section-weird div .content-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.section-weird div .content-column .flex-horizontal {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(5px, 5vw, 10px);
+  padding-top: 0;
+}
+.section-weird div .content-column .flex-horizontal img {
+  width: clamp(25px, 5vw, 50px);
+  height: auto; 
+  transform: scaleY(-1);
+  padding-top: clamp(5px, 5vw, 15px);
+}
+
+.section-weird div .content-column p{
+  font-size: clamp(14px, 3vw, 30px);
+  max-width: clamp(250px, 80vw, 350px);
+  margin: 0; 
+}
+
+.section-weird .content-column a{
+  text-decoration: none; 
+  color: var(--white-color);
+  background-color: var(--pink-red-color);
+  /* margin: */ 
+  /*padding: clamp(7px, 1vw, 20px) clamp(5px, 1vw, 20px);*/
+  border-radius: 137px;
+  font-size: clamp(24px, 4.5vw, 48px);
+  padding: clamp(7px, 1vw, 20px) clamp(10px, 3vw, 30px);
+}
+
+/* common hidden state for fade-in */
+.section-weird .fade-in {
+  opacity: 0;
+  transform: translateX(50px); /* right -> center by default */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* visible state applied via JS */
+.section-weird .fade-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* special: image comes from left */
+.section-weird div .image-column.fade-in {
+  transform: translateX(-50px);
+}
+.section-weird div .image-column.fade-in.visible {
+  transform: translateX(0px);
+}
+
+/* sequential delay for content children */
+.section-weird .content-column a.fade-in {
+  transition-delay: 0.2s;
+}
+.section-weird .content-column p.fade-in {
+  transition-delay: 0.6s;
+}
+.section-weird .content-column img.fade-in {
+  transition-delay: 1.2s;
+}
+
+
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--grey-color);
+}
+/* ------------ */
+/* .section-weird end */
+/* ------------ */
+
+/* ------------ */
+/* .section-about start*/
+/* ------------ */
+
+.section-about{  
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(3rem, 1vw, 5rem);
+  background-color: var(--secondary-color);
+  justify-content: center;
+  align-items: center; 
+}
+
+.section-about .fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-about .fade-in.visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-about span {
+  color: var(--white-color);
+  background-color: var(--grey-color);
+
+  
+  border-radius: 137px;
+  font-size: clamp(24px, 4.5vw, 48px);
+  margin: clamp(7px, 3vw, 28px) clamp(10px, 3vw, 30px);
+  padding: clamp(7px, 3vw, 28px) clamp(10px, 3vw, 30px);
+}
+
+.section-about p {
+  background-color: var(--light-grey-color);
+  color: var(--grey-color);
+  width: 50%;
+  padding: clamp(7px, 3vw, 28px);
+  margin-bottom: clamp(7px, 5vw, 5rem);
+  border-radius: clamp(7px, 3vw, 28px);
+
+}
+
+
+
+/* ------------ */
+/* .section-about end*/
+/* ------------ */
+
+form .flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form .flex .card {
+  background-color: var(--light-grey-color);
+  padding: clamp(3rem, 5vw, 5rem); 
+}
+
+form .field{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: clamp(1rem, 3vw, 5rem);
+}
+
+.field:nth-of-type(1) label {
+  color: var(--pink-red-color);
+}
+.field:nth-of-type(2) label {
+  color: var(--grey-color);
+}
+.field:nth-of-type(3) label {
+  color: var(--primary-color);
+}
+.field input {
+  color: var(--grey-color);
+  width: 100%;
+  border: 1px solid
+}
+
+.field textarea {
+  color: var(--grey-color);
+  width: 100%;
+}
+
+form .checkbox{
+  margin-bottom: clamp(1rem, 3vw, 5rem);
+  color: var(--grey-color);
+}
+
+form button{
+  appearance: none;
+  border: none;
+  background-color: var(--yellow-color);
+  color: var(--white-color);
+  width: 100%;
+  padding: clamp(1rem, 1vw, 2rem); 
+}
+
+/* ----- */
+/* footer start */
+/* ----- */
+
+footer {
+  background-color: var(--light-grey-color);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index:10;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  padding: 20px; 
+  margin: clamp(40px, 1vw, 120px) auto;
+  background-color: var(--light-grey-color);
+  max-width: 80%;
+  width: fit-content;
+  border-radius: var(--border-radius)
+}
+
+.col1 {
+  grid-row: 1 / span 3;
+  background: var(--pink-red-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col1 img {
+  max-width:clamp(100px, 30vw, 300px);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.col2 {
+  color: var(--white-color);
+
+  display: flex; 
+  align-items: center;
+  gap: clamp(2px, 1vh, 10px);
+  border-radius: var(--border-radius);
+}
+
+.col2 img {
+  flex-basis: 33%;
+  width: 100%;
+  height:auto; 
+  object-fit: fill;
+  padding-left: clamp(5px, 1vh, 20px);
+  padding-top: clamp(5px, 1vh, 20px);
+  padding-bottom: clamp(5px, 1vh, 20px)
+}
+
+.col2 span {
+  flex-basis: 67%;
+  text-align: left;
+}
+
+.col2.red{ background-color: var(--red-color);}
+.col2.yellow{ background-color: var(--yellow-color);}
+.col2.grey{ background-color: var(--grey-color);}
+
+/* ----- */
+/* footer end */
+/* ----- */
+
+/* ----- */
+/* footer parallax start */
+/* ----- */
+
+/* ----- */
+/* footer parallax end */
+/* ----- */
+
+/* ---------------- */
+/* animations start */
+/* ---------------- */
+.animate-in{
+  opacity: 0;
+  
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-short {
+  transform: translateY(80px);
+}
+
+.animate-short-top-bottom{
+  transform: translateY(-80px);
+}
+
+.animate-long {
+  transform: translateY(120px);
+}
+
+
+.animate-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.parallax {
+  will-change: transform;
+}
+/* -------------- */
+/* animations end */
+/* -------------- */
+

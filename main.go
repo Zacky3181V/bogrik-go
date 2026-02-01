@@ -9,30 +9,37 @@ func main() {
 	r := gin.Default()
 
 	r.LoadHTMLGlob("templates/*.html")
-	r.Static("/assets-compressed", "./assets-compressed")
+	r.Static("/assets", "./assets")
 	r.GET("/", func(c *gin.Context) {
-		c.HTML(200, "index.html", gin.H{})
-	})
-
-	r.GET("/about", func(c *gin.Context) {
 		c.HTML(200, "index.html", gin.H{
 			"Title": "About",
+			"Scripts": []string{
+				"/assets/js/parallax.js",
+				"/assets/js/form-submission.js",
+				"/assets/js/footer-animation.js",
+				"/assets/js/store-disabled.js",
+			},
 		})
 	})
 
 	r.GET("/portfolio", func(c *gin.Context) {
 		c.HTML(200, "portfolio.html", gin.H{
 			"Title":     "Portfolio",
-			"MainTitle": "Bogrik",
-			"SubTitle":  "Portfolio",
+			"Scripts": []string{
+				"/assets/js/footer-animation.js",
+				"/assets/js/store-disabled.js",
+			},
 		})
 	})
 
-	r.GET("/store", func(c *gin.Context) {
+	r.GET("/order", func(c *gin.Context) {
 		c.HTML(200, "store.html", gin.H{
 			"Title":     "Order",
-			"MainTitle": "Order",
-			"SubTitle":  "Order",
+			"Scripts": []string{
+				"/assets/js/footer-animation.js",
+				"/assets/js/form-submission.js",
+				"/assets/js/store-disabled.js",
+			},
 		})
 	})
 
@@ -41,52 +48,74 @@ func main() {
 	r.GET("/digital-painting", func(c *gin.Context) {
 		c.HTML(200, "digital-painting.html", gin.H{
 			"Title":     "Digital Painting",
-			"MainTitle": "Digital Painting",
-			"SubTitle":  "Bogrik",
+			"Scripts": []string{
+				"/assets/js/footer-animation.js",
+				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
+			},
+			
 		})
 	})
 	r.GET("/malutka-pig", func(c *gin.Context) {
 		c.HTML(200, "malutka-pig.html", gin.H{
 			"Title":     "Malutka Pig",
-			"MainTitle": "Malutka Pig",
-			"SubTitle":  "Bogrik",
+			"Scripts": []string{
+				"/assets/js/footer-animation.js",
+				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
+			},
 		})
 	})
 	r.GET("/weird", func(c *gin.Context) {
 		c.HTML(200, "weird.html", gin.H{
 			"Title":     "Weird",
-			"MainTitle": "Weird",
-			"SubTitle":  "Bogrik",
+			"Scripts": []string{
+				"/assets/js/footer-animation.js",
+				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
+			},
 		})
 	})
 	r.GET("/random", func(c *gin.Context) {
 		c.HTML(200, "random.html", gin.H{
 			"Title":     "Random",
-			"MainTitle": "Random",
-			"SubTitle":  "Bogrik",
+			"Scripts": []string{
+				"/assets/js/footer-animation.js",
+				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
+			},
 		})
 	})
 	r.GET("/moral", func(c *gin.Context) {
 		c.HTML(200, "moral.html", gin.H{
 			"Title":     "Moral",
-			"MainTitle": "Moral",
-			"SubTitle":  "Bogrik",
+			"Scripts": []string{
+				"/assets/js/footer-animation.js",
+				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
+			},
 		})
 	})
 	r.GET("/marvin", func(c *gin.Context) {
 		c.HTML(200, "marvin.html", gin.H{
 			"Title":     "Marvin",
-			"MainTitle": "Marvin",
-			"SubTitle":  "Bogrik",
+			"Scripts": []string{
+				"/assets/js/footer-animation.js",
+				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
+			},
 		})
 	})
 	r.GET("/unibo", func(c *gin.Context) {
 		c.HTML(200, "unibo.html", gin.H{
 			"Title":     "UniBo",
-			"MainTitle": "UniBo",
-			"SubTitle":  "Bogrik",
+			"Scripts": []string{
+				"/assets/js/footer-animation.js",
+				"/assets/js/store-disabled.js",
+				"/assets/js/image-overlay.js",
+			},
 		})
 	})
 
-	r.Run(":8085")
+	r.Run("0.0.0.0:8085")
 }
