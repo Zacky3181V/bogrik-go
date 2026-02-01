@@ -134,7 +134,7 @@ main {
   align-self: end;
   justify-self: center;
   z-index: 2;
-  padding-bottom: clamp(0.5em, 1.2vw, 2em);
+  padding-bottom: clamp(0.75rem, 2dvw, 1.5rem);
   font-size: clamp(12px, 4vw, 36px);
   font-weight: bold;
   color: var(--white-color); /* or any color you prefer */
