@@ -120,8 +120,20 @@ main {
 .grid .yellow{
   padding-top: 0;
   margin-top: auto;
+  z-index:1;
 }
 
+.grid .hello {
+  grid-area: 1/1;
+  align-self: end;
+  justify-self: center;
+  z-index: 2;
+  padding-bottom: clamp(1rem, 3vw, 3rem); /* adjust as needed */
+  font-size: clamp(12px, 4vw, 36px);
+  font-weight: bold;
+  color: var(--white-color); /* or any color you prefer */
+  text-align: center;
+}
 
 .grid .pink-top {
   padding-bottom: clamp(5rem, 1vh, 15rem); 
