@@ -18,7 +18,8 @@ import (
 )
 
 type Order struct {
-	Email            string
+	Email            string `form:"user_email" binding:"required,email"`
+	HoneypotEmail    string `form:"email"`
 	Description      string
 	Images           []*multipart.FileHeader
 	MarketingConsent bool
@@ -43,19 +44,26 @@ func HandleForm(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
-	env:= os.Getenv("ENV")
+	if order.HoneypotEmail != "" {
+		log.Printf("[Honeypot Blocked] Bot caught from IP: %s", c.ClientIP())
+		// Fake a successful 200 OK response to fool the bot
+		c.JSON(http.StatusOK, gin.H{"status": "ok"})
+		return
+	}
 
-	if env=="prod"{
+	env := os.Getenv("ENV")
+
+	if env == "prod" {
 
 		//msg := formatOrderMessage(order)
 		chatID := getChatID()
-	
+
 		sendOrderToTelegram(order, chatID)
 		client := resend.NewClient(os.Getenv("RESEND_KEY"))
-	
+
 		if order.MarketingConsent {
 			go func(email string) {
-	
+
 				params := &resend.CreateContactRequest{
 					Email: email,
 				}
@@ -66,23 +74,23 @@ func HandleForm(c *gin.Context) {
 			}(order.Email)
 		}
 		ctx := context.TODO()
-	
+
 		emailBody, err := os.ReadFile("templates/order-confirmation-email.html")
 		if err != nil {
 			log.Printf("Failed to read order-confirmation-email.html")
 		}
-	
+
 		params := &resend.SendEmailRequest{
 			From:    os.Getenv("EMAIL_FROM"),
 			To:      []string{order.Email},
 			Subject: os.Getenv("EMAIL_SUBJECT"),
 			Html:    string(emailBody),
 		}
-	
+
 		sent, err := client.Emails.SendWithContext(ctx, params)
-	
+
 		if err != nil {
-			panic(err)
+			fmt.Println("Email sending didn't work")
 		}
 		fmt.Println(sent.Id)
 	}
@@ -216,7 +224,8 @@ func sendTelegramMediaGroup(chatID int64, files []*multipart.FileHeader, caption
 func formToStruct(c *gin.Context) (Order, error) {
 	var order Order
 
-	order.Email = c.PostForm("email")
+	order.Email = c.PostForm("user_email")
+	order.HoneypotEmail = c.PostForm("email")
 	order.Description = c.PostForm("description")
 	order.MarketingConsent = c.PostForm("marketingConsent") != ""
 
