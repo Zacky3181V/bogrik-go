@@ -261,6 +261,7 @@ currently overlap is visible. Hide it. */
   display: block;
   width: clamp(100px, 40vw, 350px);
   max-width: 100%;
+  border-radius: clamp(48px, 3.5vw, 64px);
 }
 
 .section-weird div .content-column {
