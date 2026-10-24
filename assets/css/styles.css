@@ -172,11 +172,23 @@ main {
   padding-bottom: clamp(10rem, 30vw, 15rem); 
 }
 
-.grid .xy-center .grey-rounded-logo{
+.grid .xy-center .grey-rounded-logo {
   background-color: var(--grey-color);
   border-radius: 50%; 
-  width: clamp(135px, 30vw, 500px);
-  height: auto; 
+  width: clamp(160px, 35vw, 550px); /* Increased min/max values to make it bigger */
+  height: clamp(160px, 35vw, 550px); /* Match height to width to keep it a perfect circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensures the image doesn't spill outside the circle */
+}
+
+.grid .xy-center .grey-rounded-logo img {
+  width: 100%; /* Adjust this percentage to make the logo look bigger or smaller inside the grey circle */
+  max-width: none; 
+  height: auto;
+  transform: scale(1.10) translateX(0.9%) translateY(-1.5%);
+  object-fit: contain;
 }
 
 .grid .xy-center .bottom-icons {
