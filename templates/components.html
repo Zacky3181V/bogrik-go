@@ -61,8 +61,12 @@
     <div class="flex">
         <div class="card">
             <div class="field">
-                <label>Email</label>
-                <input class="indie-flower-regular" type="email" name="email" placeholder="user@example.com" required>
+                <label for="userEmailInput">Email</label>
+                <input id="userEmailInput" class="indie-flower-regular" type="email" name="user_email" placeholder="user@example.com" required>
+            </div>
+            <div class="form-field-wrapper" aria-hidden="true">
+                <label for="hpEmail">Email</label>
+                <input id="hpEmail" type="text" name="email" tabindex="-1" autocomplete="off">
             </div>
             <div class="field">
                 <label >Description</label>
