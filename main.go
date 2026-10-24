@@ -52,6 +52,7 @@ func main() {
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
 				"/assets/js/image-overlay.js",
+				"/assets/js/photo-wall.js",
 			},
 			
 		})
@@ -63,6 +64,7 @@ func main() {
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
 				"/assets/js/image-overlay.js",
+				"/assets/js/photo-wall.js",
 			},
 		})
 	})
@@ -73,6 +75,7 @@ func main() {
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
 				"/assets/js/image-overlay.js",
+				"/assets/js/photo-wall.js",
 			},
 		})
 	})
@@ -83,6 +86,7 @@ func main() {
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
 				"/assets/js/image-overlay.js",
+				"/assets/js/photo-wall.js",
 			},
 		})
 	})
@@ -93,6 +97,7 @@ func main() {
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
 				"/assets/js/image-overlay.js",
+				"/assets/js/photo-wall.js",
 			},
 		})
 	})
@@ -103,6 +108,7 @@ func main() {
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
 				"/assets/js/image-overlay.js",
+				"/assets/js/photo-wall.js",
 			},
 		})
 	})
@@ -113,6 +119,7 @@ func main() {
 				"/assets/js/footer-animation.js",
 				"/assets/js/store-disabled.js",
 				"/assets/js/image-overlay.js",
+				"/assets/js/photo-wall.js",
 			},
 		})
 	})

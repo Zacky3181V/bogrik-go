@@ -15,8 +15,10 @@
   font-family: 'Luckiest Guy', cursive;
   font-size: clamp(12px, 2vw, 24px);
 }
-html, body{
-  height: 100%; 
+html {
+    height: auto;          /* Change from height: 100% or 100vh */
+    min-height: 100%;      /* Allows it to grow as content gets taller */
+    overflow-x: hidden;    /* Safe, but avoid overflow-y: hidden */
 }
 body {
   background-color: var(--light-grey-color);
@@ -24,6 +26,9 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  height: auto;          /* Change from height: 100% or 100vh */
+  min-height: 100%;      /* Allows it to grow as content gets taller */
+  overflow-x: hidden;    /* Safe, but avoid overflow-y: hidden */
 }
 
 /* ------------ */
